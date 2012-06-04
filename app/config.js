@@ -18,16 +18,6 @@ require.config({
     backbone: {
       deps: ["lodash", "jquery"],
       exports: "Backbone"
-    },
-
-    // Add the Backbone LocalStorage plugin in
-    "plugins/backbone-localstorage": {
-      deps: ["backbone"]
-    },
-
-    // Add the Backbone LocalStorage plugin in
-    "plugins/backbone.layoutmanager": {
-      deps: ["backbone"]
     }
   }
 });

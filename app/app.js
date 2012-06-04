@@ -2,43 +2,51 @@ define([
   // Libs
   "jquery",
   "lodash",
-  "backbone",
-
-  // Plugins
-  "plugins/backbone.layoutmanager"
+  "backbone"
 ],
 
 function($, _, Backbone) {
-  // Create or attach to the global JavaScript Template cache.
-  var JST = window.JST = window.JST || {}; 
+  // Localize or create a new JavaScript Template object.
+  var JST = window.JST = window.JST || {};
 
-  // Configure LayoutManager
-  Backbone.LayoutManager.configure({
-    paths: {
-      layout: "app/templates/layouts/",
-      template: "app/templates/"
+  // Keep active application instances namespaced under an app object.
+  return _.extend({
+
+    // This is useful when developing if you don't want to use a
+    // build process every time you change a template.
+    //
+    // Delete if you are using a different template loading method.
+    fetchTemplate: function(path) {
+      // Append the file extension.
+      path += ".html";
+
+      // Should be an instant synchronous way of getting the template, if it
+      // exists in the JST object.
+      if (!JST[path]) {
+        // Fetch it asynchronously if not available from JST, ensure that
+        // template requests are never cached and prevent global ajax event
+        // handlers from firing.
+        $.ajax({
+          url: "/" + path,
+          dataType: "text",
+          cache: false,
+          async: false,
+
+          success: function(contents) {
+            JST[path] = _.template(contents);
+          }
+        });
+      }
+
+      // Ensure a normalized return value.
+      return JST[path];
     },
 
-    fetch: function(path) {
-      path = path + ".html";
-
-      if (!JST[path]) {
-        $.ajax({ url: path, async: false }).then(function(contents) {
-          JST[path] = _.template(contents);
-        });
-      } 
-      
-      return JST[path];
-    }
-  });
-
-  return {
     // Create a custom object with a nested Views object
     module: function(additionalProps) {
       return _.extend({ Views: {} }, additionalProps);
-    },
+    }
 
-    // Keep active application instances namespaced under an app object.
-    app: _.extend({}, Backbone.Events)
-  };
+  // Mix Backbone.Events into the app object.
+  }, Backbone.Events);
 });
