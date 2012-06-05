@@ -38,6 +38,7 @@
 
 #main ul li {
   line-height: 28px;
+  list-style: none;
 }
 
 #main header h1 {
