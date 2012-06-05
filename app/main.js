@@ -4,13 +4,14 @@ require([
   // Libs
   "jquery",
   "backbone",
+  "masseuse",
 
   // Modules
   "modules/example",
   "modules/story"
 ],
 
-function(app, $, Backbone, Example, Story) {
+function(app, $, Backbone, Masseuse, Example, Story) {
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
@@ -47,6 +48,9 @@ function(app, $, Backbone, Example, Story) {
     }
     
   });
+
+  console.log('Masseuse:', Masseuse);
+
 
   // Treat the jQuery ready function as the entry point to the application.
   // Inside this function, kick-off all initialization, everything up to this
