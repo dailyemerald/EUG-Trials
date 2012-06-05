@@ -20,6 +20,14 @@ module.exports = function(grunt) {
       ]
     },
 
+    watch: {
+      scripts: {
+        files: '<config:list.all>',
+        tasks: 'lint server'
+      }
+    }
+
+
     // The jshint option for scripturl is set to lax, because the anchor
     // override inside main.js needs to test for them so as to not accidentally
     // route.
