@@ -60,7 +60,8 @@ module.exports = function(grunt) {
     // only want to load one stylesheet in index.html.
     mincss: {
       "dist/release/index.css": [
-        "assets/css/h5bp.css"
+        "assets/css/h5bp.css",
+        "assets/css/style.css"
       ]
     },
 
@@ -126,12 +127,6 @@ module.exports = function(grunt) {
 
       // Do not wrap everything in an IIFE
       wrap: false
-    },
-
-    // The headless QUnit testing environment is provided for "free" by Grunt.
-    // Simply point the configuration to your test directory.
-    qunit: {
-      all: ["test/qunit/*.html"]
     }
 
   });
