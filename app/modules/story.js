@@ -17,9 +17,8 @@ function(app, Backbone) {
   Story.Collection = Backbone.Collection.extend({
     model: Story.Model,
     url: 'http://dailyemerald.com/section/track-field/json?callback=?',
-    
     parse: function(data) {
-      console.log('json data into parse:', data);
+      console.log('Story.Collection: json data into parse:', data);
       return data;
     }
     
@@ -36,11 +35,12 @@ function(app, Backbone) {
     initialize: function() {
       this.collection = app.StoryCollectionInstance;
       console.log("Story.View.List init, this.collection:", this.collection);
-      this.collection.bind("reset", this.render(), this);
+    
+      this.collection.bind("reset", this.render, this);
     },
 
     render: function(done) {
-      console.log('collection:', this.collection);
+      console.log('s v l: render: collection:', this.collection);
       // Fetch the template.
       var tmpl = app.fetchTemplate(this.template);
 
@@ -73,6 +73,7 @@ function(app, Backbone) {
 
     initialize: function() {
       this.collection = app.StoryCollectionInstance;
+      this.collection.bind('reset', this.render, this);
     },
 
     render: function(done) {
@@ -82,11 +83,17 @@ function(app, Backbone) {
       
       this.model = this.collection.get(this.id);
       
-      console.log('in story.views.detail', this.model);
-      var tmpl = app.fetchTemplate(this.template);
+      if (this.model) {
+   
+        console.log('in story.views.detail', this.model);
+        var tmpl = app.fetchTemplate(this.template);
 
-      // Set the template contents.
-      this.$el.html(tmpl({story: this.model}));
+        // Set the template contents.
+        this.$el.html(tmpl({story: this.model.toJSON() }));
+      } else {
+        console.log('dont have a model yet in s v d');
+        this.$el.html("Loading...");
+      }
     }
   });
   

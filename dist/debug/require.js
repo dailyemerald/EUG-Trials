@@ -14631,17 +14631,14 @@ function(app, Backbone) {
   Story.Collection = Backbone.Collection.extend({
     model: Story.Model,
     url: 'http://dailyemerald.com/section/track-field/json?callback=?',
-    
     parse: function(data) {
-      console.log('json data into parse:', data);
+      console.log('Story.Collection: json data into parse:', data);
       return data;
     }
     
     
   });
-  
-  Story.CollectionInstance = new Story.Collection();
-  
+    
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
@@ -14651,6 +14648,7 @@ function(app, Backbone) {
 
     initialize: function() {
       this.collection = app.StoryCollectionInstance;
+      console.log("Story.View.List init, this.collection:", this.collection);
       this.collection.bind("reset", this.render(), this);
     },
 
@@ -14771,11 +14769,8 @@ function(app, $, Backbone, Masseuse, Example, Story) {
     
     // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
     app.StoryCollectionInstance = new Story.Collection();
-    app.StoryCollectionInstance.fetch({
-      success: function(data) {
-        console.log("app.StoryCollectionInstance, success. data:", data);
-      }
-    });     
+    console.log(app.StoryCollectionInstance, "app.StoryCollectionInstance in main.js $");
+    app.StoryCollectionInstance.fetch();   
     
   });
 

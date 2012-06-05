@@ -25,7 +25,7 @@ function(app, $, Backbone, Masseuse, Example, Story) {
     list: function() {
       console.log('list:', Story);
       var list = new Story.Views.List();
-      list.$el.appendTo("#main");
+      list.$el = $("#main");
       list.render();
     },
     
@@ -33,7 +33,7 @@ function(app, $, Backbone, Masseuse, Example, Story) {
       var detail = new Story.Views.Detail({
         id: id
       });
-      detail.$el.appendTo("#main");
+      detail.$el = $("#main");
       detail.render();
     },
     
@@ -49,22 +49,26 @@ function(app, $, Backbone, Masseuse, Example, Story) {
   // Inside this function, kick-off all initialization, everything up to this
   // point should be definitions.
   $(function() {
+    console.log('inside $');
+   
+     // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
+        app.StoryCollectionInstance = new Story.Collection();
+        console.log(app.StoryCollectionInstance, "app.StoryCollectionInstance in main.js $");
+        app.StoryCollectionInstance.fetch();   
+        console.log(app.StoryCollectionInstance, "app.StoryCollectionInstance in main.js $ (after)");
+     
+   
+   
     // Define your master router on the application namespace and trigger all
     // navigation from this instance.
     app.router = new Router();
+    console.log('post app.router spinup');
 
     // Trigger the initial route and enable HTML5 History API support
     Backbone.history.start({ pushState: true });
-    
-    // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
-    app.StoryCollectionInstance = new Story.Collection();
-    console.log(app.StoryCollectionInstance, "app.StoryCollectionInstance in main.js $");
-    app.StoryCollectionInstance.fetch({
-      success: function(data) {
-        console.log("app.StoryCollectionInstance, success. data:", data);
-      }
-    });     
-    
+    console.log('post history');
+   
+   
   });
 
   // All navigation that is relative should be passed through the navigate
