@@ -49,8 +49,7 @@ function(app, $, Backbone, Masseuse, Example, Story) {
     
   });
 
-  console.log('Masseuse:', Masseuse);
-
+  //console.log('Masseuse:', Masseuse);
 
   // Treat the jQuery ready function as the entry point to the application.
   // Inside this function, kick-off all initialization, everything up to this

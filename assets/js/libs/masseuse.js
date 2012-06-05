@@ -1,4 +1,4 @@
-define(function() {
+define(['jquery'], function() {
 
   function listenForTouches() {
     if (!'ontouchstart' in window) {
