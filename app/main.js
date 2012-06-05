@@ -27,6 +27,7 @@ function(app, $, Backbone, Masseuse, Example, Story) {
       var list = new Story.Views.List();
       list.$el = $("#main");
       list.render();
+      window.scrollTo(0,1);
     },
     
     detail: function(id) {
@@ -35,6 +36,7 @@ function(app, $, Backbone, Masseuse, Example, Story) {
       });
       detail.$el = $("#main");
       detail.render();
+      window.scrollTo(0,1);
     },
     
     wildcard: function() {
