@@ -1,0 +1,18 @@
+<header>
+	the header
+</header>
+<section role="main">
+	stuff.
+	<ul>
+	<% _.each(stories, function(story) { %> 
+		<li>
+			<a href="/story/<%= story.id %>">
+				<%= story.title %>
+			</a>
+		</li> 
+	<% }); %>
+</ul>
+</section>
+<footer>
+	the footer
+</footer>

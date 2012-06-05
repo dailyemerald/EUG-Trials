@@ -37,10 +37,10 @@ function(app, $, Backbone, Example, Story) {
       list.$el.appendTo("#main");
       list.render();
     },
-    detail: function() {
-      var list = new Story.Views.Detail();
-      list.$el.appendTo("#main");
-      list.render();
+    detail: function(id) {
+      var detail = new Story.Views.Detail();
+      detail.$el.appendTo("#main");
+      detail.render();
     },
     wildcard: function() {
       console.log('wildcard route');
