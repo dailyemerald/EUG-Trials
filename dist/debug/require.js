@@ -320,7 +320,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/story-detail.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('', story.content ,'');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('', content ,'');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/story-list.html'] = function(data) { return function (obj,_) {
@@ -14510,7 +14510,7 @@ function($, _, Backbone) {
   }, Backbone.Events);
 });
 
-define('masseuse',[],function() {
+define('masseuse',['jquery'], function() {
 
   function listenForTouches() {
     if (!'ontouchstart' in window) {
@@ -14640,6 +14640,8 @@ function(app, Backbone) {
     
   });
   
+  Story.CollectionInstance = new Story.Collection();
+  
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
@@ -14648,17 +14650,8 @@ function(app, Backbone) {
     template: "app/templates/story-list",
 
     initialize: function() {
-      
-      var self = this;
-      
-      this.collection = new Story.Collection();
-      this.collection.bind("reset", function() {
-        self.render();
-      });
-      
-      this.collection.fetch();
-      
-      console.log('hi');
+      this.collection = app.StoryCollectionInstance;
+      this.collection.bind("reset", this.render(), this);
     },
 
     render: function(done) {
@@ -14667,7 +14660,7 @@ function(app, Backbone) {
       var tmpl = app.fetchTemplate(this.template);
 
       // Set the template contents.
-      this.$el.html(tmpl({stories: this.collection.toJSON() }));
+      this.$el.html(tmpl({ stories: this.collection.toJSON() }));
     }
   });
   
@@ -14693,8 +14686,17 @@ function(app, Backbone) {
   Story.Views.Detail = Backbone.View.extend({
     template: "app/templates/story-detail",
 
+    initialize: function() {
+      this.collection = app.StoryCollectionInstance;
+    },
+
     render: function(done) {
       // Fetch the template.
+      console.log('detail has this.id=',this.id);
+      console.log('this.collection in detail is', this.collection);
+      
+      this.model = this.collection.get(this.id);
+      
       console.log('in story.views.detail', this.model);
       var tmpl = app.fetchTemplate(this.template);
 
@@ -14732,16 +14734,6 @@ function(app, $, Backbone, Masseuse, Example, Story) {
       "story/:id": "detail",
       "*var": "wildcard"
     },
-
-    index: function() {
-      var tutorial = new Example.Views.Tutorial();
-
-      // Attach the tutorial to the DOM
-      tutorial.$el.appendTo("#main");
-
-      // Render the tutorial.
-      tutorial.render();
-    },
     
     list: function() {
       console.log('list:', Story);
@@ -14749,19 +14741,22 @@ function(app, $, Backbone, Masseuse, Example, Story) {
       list.$el.appendTo("#main");
       list.render();
     },
+    
     detail: function(id) {
-      var detail = new Story.Views.Detail();
+      var detail = new Story.Views.Detail({
+        id: id
+      });
       detail.$el.appendTo("#main");
       detail.render();
     },
+    
     wildcard: function() {
       console.log('wildcard route');
     }
     
   });
 
-  console.log('Masseuse:', Masseuse);
-
+  //console.log('Masseuse:', Masseuse);
 
   // Treat the jQuery ready function as the entry point to the application.
   // Inside this function, kick-off all initialization, everything up to this
@@ -14773,6 +14768,15 @@ function(app, $, Backbone, Masseuse, Example, Story) {
 
     // Trigger the initial route and enable HTML5 History API support
     Backbone.history.start({ pushState: true });
+    
+    // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
+    app.StoryCollectionInstance = new Story.Collection();
+    app.StoryCollectionInstance.fetch({
+      success: function(data) {
+        console.log("app.StoryCollectionInstance, success. data:", data);
+      }
+    });     
+    
   });
 
   // All navigation that is relative should be passed through the navigate

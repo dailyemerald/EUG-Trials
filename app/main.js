@@ -21,16 +21,6 @@ function(app, $, Backbone, Masseuse, Example, Story) {
       "story/:id": "detail",
       "*var": "wildcard"
     },
-
-    index: function() {
-      var tutorial = new Example.Views.Tutorial();
-
-      // Attach the tutorial to the DOM
-      tutorial.$el.appendTo("#main");
-
-      // Render the tutorial.
-      tutorial.render();
-    },
     
     list: function() {
       console.log('list:', Story);
@@ -38,11 +28,15 @@ function(app, $, Backbone, Masseuse, Example, Story) {
       list.$el.appendTo("#main");
       list.render();
     },
+    
     detail: function(id) {
-      var detail = new Story.Views.Detail();
+      var detail = new Story.Views.Detail({
+        id: id
+      });
       detail.$el.appendTo("#main");
       detail.render();
     },
+    
     wildcard: function() {
       console.log('wildcard route');
     }
@@ -61,6 +55,16 @@ function(app, $, Backbone, Masseuse, Example, Story) {
 
     // Trigger the initial route and enable HTML5 History API support
     Backbone.history.start({ pushState: true });
+    
+    // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
+    app.StoryCollectionInstance = new Story.Collection();
+    console.log(app.StoryCollectionInstance, "app.StoryCollectionInstance in main.js $");
+    app.StoryCollectionInstance.fetch({
+      success: function(data) {
+        console.log("app.StoryCollectionInstance, success. data:", data);
+      }
+    });     
+    
   });
 
   // All navigation that is relative should be passed through the navigate

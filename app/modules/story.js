@@ -25,7 +25,7 @@ function(app, Backbone) {
     
     
   });
-  
+    
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
@@ -34,17 +34,9 @@ function(app, Backbone) {
     template: "app/templates/story-list",
 
     initialize: function() {
-      
-      var self = this;
-      
-      this.collection = new Story.Collection();
-      this.collection.bind("reset", function() {
-        self.render();
-      });
-      
-      this.collection.fetch();
-      
-      console.log('hi');
+      this.collection = app.StoryCollectionInstance;
+      console.log("Story.View.List init, this.collection:", this.collection);
+      this.collection.bind("reset", this.render(), this);
     },
 
     render: function(done) {
@@ -53,7 +45,7 @@ function(app, Backbone) {
       var tmpl = app.fetchTemplate(this.template);
 
       // Set the template contents.
-      this.$el.html(tmpl({stories: this.collection.toJSON() }));
+      this.$el.html(tmpl({ stories: this.collection.toJSON() }));
     }
   });
   
@@ -79,8 +71,17 @@ function(app, Backbone) {
   Story.Views.Detail = Backbone.View.extend({
     template: "app/templates/story-detail",
 
+    initialize: function() {
+      this.collection = app.StoryCollectionInstance;
+    },
+
     render: function(done) {
       // Fetch the template.
+      console.log('detail has this.id=',this.id);
+      console.log('this.collection in detail is', this.collection);
+      
+      this.model = this.collection.get(this.id);
+      
       console.log('in story.views.detail', this.model);
       var tmpl = app.fetchTemplate(this.template);
 

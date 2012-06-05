@@ -5,7 +5,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/story-detail.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('', story.content ,'');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('', content ,'');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/story-list.html'] = function(data) { return function (obj,_) {
