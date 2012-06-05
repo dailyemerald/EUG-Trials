@@ -44,7 +44,7 @@ function(app, Backbone) {
       
       this.collection.fetch();
       
-      console.log('hi')
+      console.log('hi');
     },
 
     render: function(done) {
@@ -66,7 +66,8 @@ function(app, Backbone) {
     render: function(done) {
       
     }
-  });//*/
+  });
+  */
 
 
 ///////////////////////////////////////////////////////////////////////  
@@ -80,7 +81,7 @@ function(app, Backbone) {
 
     render: function(done) {
       // Fetch the template.
-      console.log('in story.views.detail', this.model)
+      console.log('in story.views.detail', this.model);
       var tmpl = app.fetchTemplate(this.template);
 
       // Set the template contents.
