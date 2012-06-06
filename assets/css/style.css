@@ -57,6 +57,37 @@ footer {
   z-index: 2;
 }
 
+
+#back-button {
+  background: #333;
+  color: #FFF;
+  border-radius: 30px;
+  padding: 9px;
+  margin-left: 10px;
+  width: 18px;
+  display:block;
+}
+
+
+.nav-wrapper {
+  background: #222;
+  height: 100%;
+}
+.nav-button {
+  height: 100%;
+  padding: 6px 20px;
+  border-radius: 10px;
+  float: left;
+  background: #333;
+  color: #FFF;
+  margin: 0 5px;
+}
+
+.nav-button a, .nav-button a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+
 /* font styles */
 
 #main p {
