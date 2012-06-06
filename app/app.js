@@ -1,6 +1,6 @@
 define([
   // Libs
-  "jquery",
+  "zepto",
   "lodash",
   "backbone"
 ],

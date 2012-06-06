@@ -2,9 +2,9 @@ require([
   "app",
 
   // Libs
-  "jquery",
+  "zepto",//"jquery",
   "backbone",
-  "masseuse",
+  //"masseuse",
   
   "text!templates/header.html",
   "text!templates/footer.html",
@@ -15,7 +15,7 @@ require([
   "modules/story"
 ],
 
-function(app, $, Backbone, Masseuse, headerTemplate, footerTemplate, scheduleTemplate, Example, Story) {
+function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, Example, Story) {
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
@@ -62,7 +62,7 @@ function(app, $, Backbone, Masseuse, headerTemplate, footerTemplate, scheduleTem
 
     $("header").html(headerTemplate);
     $("footer").html(footerTemplate);
-    $("#back-button").on(mobileTapEvent, function(evt) {
+    $("#back-button").tap(function(evt) {
       window.history.back();
     });
 
@@ -70,8 +70,6 @@ function(app, $, Backbone, Masseuse, headerTemplate, footerTemplate, scheduleTem
     app.StoryCollectionInstance = new Story.Collection();
     app.StoryCollectionInstance.fetch();   
         
-    // Define your master router on the application namespace and trigger all
-    // navigation from this instance.
     app.router = new Router();
     
     Backbone.history.start({ pushState: true });
@@ -79,16 +77,9 @@ function(app, $, Backbone, Masseuse, headerTemplate, footerTemplate, scheduleTem
 
 
 
-  var killNextLink = false;
-  $(document).on('touchmove', 'a', function(evt) {
-    console.log('i see a move!');
-   // killNextLink = true;
-  });
-
   // bounce clicks to taps if we're a browers and don't make taps.
   // http://getintothis.com/blog/2012/03/04/triggering-zepto-tap-event-using-click/
-  var mobileTapEvent = 'touchend';
-
+/*
   if (!(mobileTapEvent in window)) {
     //console.log('not mobile');
     $(document).delegate('body', 'click', function(evt){
@@ -99,29 +90,30 @@ function(app, $, Backbone, Masseuse, headerTemplate, footerTemplate, scheduleTem
   } else {
     //console.log('mobile');
   }
+  */
   
   // All navigation that is relative should be passed through the navigate
   // method, to be processed by the router.  If the link has a data-bypass
   // attribute, bypass the delegation completely.
   //$(document).on(mobileTapEvent, "a:not([data-bypass])", function(evt) {
-  $(document).on(mobileTapEvent, "a:not([data-bypass])", function(evt) {
+  $(document).on('tap', 'a:not([data-bypass])', function(evt) {
     //console.log('inside', mobileTapEvent, "handler");
-  
-    if (!killNextLink) {
-  
+ 
       var href = $(this).attr("href");
       var protocol = this.protocol + "//";
 
       if (href && href.slice(0, protocol.length) !== protocol && href.indexOf("javascript:") !== 0) {
         evt.preventDefault();
         Backbone.history.navigate(href, true);
+      } else {
+        //console.log('boo')
+        //evt.preventDefault();
       } 
-      killNextLink = false;
-      
-    } else {
-      console.log('no action.')
-    }
     
+  });
+  $(document).on('click', 'body', function(evt) {
+    $(evt.target).trigger('tap');
+    evt.preventDefault();
   });
 
 });

@@ -1353,3 +1353,10 @@ window.Zepto = Zepto
     $.fn[m] = function(callback){ return this.bind(m, callback) }
   })
 })(Zepto)
+
+window.Zepto = Zepto;
+'$' in window || (window.$ = Zepto);
+
+if ( typeof define === "function" && define.amd ) {
+  define( "zepto", [], function () { return Zepto; } );
+}
