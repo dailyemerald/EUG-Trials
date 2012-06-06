@@ -109,8 +109,12 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, Exa
         //console.log('boo')
         //evt.preventDefault();
       } 
-    
   });
+  
+  $('.story-detail').on('swipeLeft', function() { //TODO: move to module
+    Backbone.history.navigate('/', true);
+  })
+  
   $(document).on('click', 'body', function(evt) {
     $(evt.target).trigger('tap');
     evt.preventDefault();
