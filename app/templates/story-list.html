@@ -1,18 +1,9 @@
-<header>
-	Stories
-</header>
-<section role="main">
-	stuff.
-	<ul>
-	<% _.each(stories, function(story) { %> 
-		<li>
-			<a href="/story/<%= story.id %>">
-				<h3><%= story.title %></h3>
-			</a>
-		</li> 
-	<% }); %>
+<ul>
+<% _.each(stories, function(story) { %> 
+	<li>
+		<a href="/story/<%= story.id %>">
+			<h3><%= story.title %></h3>
+		</a>
+	</li> 
+<% }); %>
 </ul>
-</section>
-<footer>
-	the footer
-</footer>
