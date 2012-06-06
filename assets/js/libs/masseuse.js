@@ -7,7 +7,10 @@ define(['jquery'], function() {
 
     turnOffClick(['a', 'input'])
   
-    $('a').live('tap', function(e) { catchModals(e) })
+    $('a').live('tap', function(e) { 
+      console.log('caught a tap in masseuse')
+      catchModals(e) 
+    })
   
     $('input').live('tap', function(e) {
       e.preventDefault()
@@ -36,6 +39,7 @@ define(['jquery'], function() {
   } 
 
   function catchModals( event ) {
+    alert('in catchModals')
     var route = $(event.currentTarget).attr('href')
     if (!route) return false
     // Basic rules:

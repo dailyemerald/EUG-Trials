@@ -1,3 +1,23 @@
+/* http://maxogden.com/fast-webview-applications */
+* {
+  /* prevent callout when holding tap on links (the native dialog that comes up) */
+  -webkit-touch-callout: none; 
+
+  /* prevent webkit from resizing text to fit */
+  -webkit-text-size-adjust: none; 
+
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  -webkit-user-select: none; 
+}
+
+input[type="checkbox"] { -webkit-appearance: none; }
+
+input::-webkit-input-placeholder { opacity: .8; }
+
+
 #main {
   margin: 40px;
   font-size: 14px;

@@ -92,7 +92,7 @@ function(app, Backbone) {
         this.$el.html(tmpl({story: this.model.toJSON() }));
       } else {
         console.log('dont have a model yet in s v d');
-        this.$el.html("Loading...");
+        //this.$el.html("Loading...");
       }
     }
   });

@@ -20,14 +20,6 @@ module.exports = function(grunt) {
       ]
     },
 
-    watch: {
-      scripts: {
-        files: '<config:list.all>',
-        tasks: 'lint server'
-      }
-    },
-
-
     // The jshint option for scripturl is set to lax, because the anchor
     // override inside main.js needs to test for them so as to not accidentally
     // route.
@@ -68,8 +60,7 @@ module.exports = function(grunt) {
     // only want to load one stylesheet in index.html.
     mincss: {
       "dist/release/index.css": [
-        "assets/css/h5bp.css",
-        "assets/css/style.css"
+        "assets/css/h5bp.css"
       ]
     },
 
@@ -94,10 +85,6 @@ module.exports = function(grunt) {
     //  To learn more about using the server task, please refer to the code
     //  until documentation has been written.
     server: {
-
-      host: "0.0.0.0",
-      port: 8888,
-
       files: { "favicon.ico": "favicon.ico" },
 
       debug: {
@@ -139,6 +126,12 @@ module.exports = function(grunt) {
 
       // Do not wrap everything in an IIFE
       wrap: false
+    },
+
+    // The headless QUnit testing environment is provided for "free" by Grunt.
+    // Simply point the configuration to your test directory.
+    qunit: {
+      all: ["test/qunit/*.html"]
     }
 
   });
