@@ -22,8 +22,8 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: '<config:list.all>',
-        tasks: 'lint server'
+        files: '<config:lint.files>',
+        tasks: 'lint debug release'
       }
     },
 

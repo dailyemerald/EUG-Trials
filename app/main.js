@@ -35,8 +35,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       "": "list",
       "list": "list",
       "story/:id": "detail",
-      "schedule": "schedule",
-      "*var": "wildcard"
+      "schedule": "schedule"
     },
     
     initialize: function(options){
@@ -100,7 +99,10 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     $("footer").html(footerTemplate);
     $("body").append(loadingTemplate);
     $("#back-button").tap(function(evt) {
-      window.history.back();
+      if (app.pageHistory.length > 1) {
+        //evt.preventDefault();
+        window.history.back();
+      }
     });
 
     // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
@@ -123,16 +125,17 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     var protocol = this.protocol + "//";
 
     if (href && href.slice(0, protocol.length) !== protocol && href.indexOf("javascript:") !== 0) {
-      $("#loading").show();
+      //$("#loading").show();
       evt.preventDefault();
       app.pageHistory.push(href);
+      
       console.log('pageHistory:',app.pageHistory);
       Backbone.history.navigate(href, true);
     } 
       
   });
   
-  /*$('.story-detail').on('swipeLeft', function() { //TODO: move to module
+  /*$('.story-detail').on('swipe', function() { //TODO: move to module
     Backbone.history.navigate('/', true);
   });*/
   
