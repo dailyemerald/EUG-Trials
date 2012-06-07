@@ -9,13 +9,26 @@ require([
   "text!templates/header.html",
   "text!templates/footer.html",
   "text!templates/schedule.html",
+  "text!templates/loading.html",
   
   // Modules
   "modules/example",
   "modules/story"
 ],
 
-function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, Example, Story) {
+function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Example, Story) {
+
+  // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
+  Backbone.View.prototype.close = function () {
+      console.log('in our new close method...', this);
+      if (this.beforeClose) {
+          this.beforeClose();
+      }
+      this.remove();
+      this.unbind();
+  };
+
+  app.pageHistory = [];
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
@@ -27,12 +40,34 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, Exa
       "*var": "wildcard"
     },
     
+    initialize: function(options){
+    },
+    
+    // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
+    showView: function(selector, view) {
+      if (this.currentView) {
+        this.currentView.close();
+      }
+      
+      //view.$el = selector;
+      //view.render();
+      //window.scrollTo(0,1);
+      selector.html(view.render().el);
+      
+      $("#loading").hide();
+      
+      this.currentView = view;
+      //return view;
+    },
+    
     list: function() {
+      
       $("#main").html("<h2>Loading stories...</h2>"); //TODO: make this better...
-      var list = new Story.Views.List();
-      list.$el = $("#main");
-      list.render();
-      setTimeout(function () { window.scrollTo(0,1); }, 1);
+      var list = new Story.Views.List({ 
+      });
+      
+      this.showView($('#main'), list);
+    
     },
     
     detail: function(id) {
@@ -40,13 +75,15 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, Exa
       var detail = new Story.Views.Detail({
         id: id
       });
-      detail.$el = $("#main");
-      detail.render();
-      setTimeout(function () { window.scrollTo(0,1); }, 1);
+      
+      this.showView($('#main'), detail);
+
+      //setTimeout(function () { window.scrollTo(0,1); }, 1);
     },
     
-    schedule: function() {
+    schedule: function() {      
       $("#main").html(scheduleTemplate);
+      $("#loading").hide();
     },
     
     wildcard: function() {
@@ -62,6 +99,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, Exa
 
     $("header").html(headerTemplate);
     $("footer").html(footerTemplate);
+    $("body").append(loadingTemplate);
     $("#back-button").tap(function(evt) {
       window.history.back();
     });
@@ -74,23 +112,6 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, Exa
     
     Backbone.history.start({ pushState: true });
   });
-
-
-
-  // bounce clicks to taps if we're a browers and don't make taps.
-  // http://getintothis.com/blog/2012/03/04/triggering-zepto-tap-event-using-click/
-/*
-  if (!(mobileTapEvent in window)) {
-    //console.log('not mobile');
-    $(document).delegate('body', 'click', function(evt){
-      //console.log('about to manually trigger', mobileTapEvent);
-      $(evt.target).trigger( mobileTapEvent );
-      evt.preventDefault();
-    });
-  } else {
-    //console.log('mobile');
-  }
-  */
   
   // All navigation that is relative should be passed through the navigate
   // method, to be processed by the router.  If the link has a data-bypass
@@ -99,25 +120,28 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, Exa
   $(document).on('tap', 'a:not([data-bypass])', function(evt) {
     //console.log('inside', mobileTapEvent, "handler");
  
-      var href = $(this).attr("href");
-      var protocol = this.protocol + "//";
+    var href = $(this).attr("href");
+    var protocol = this.protocol + "//";
 
-      if (href && href.slice(0, protocol.length) !== protocol && href.indexOf("javascript:") !== 0) {
-        evt.preventDefault();
-        Backbone.history.navigate(href, true);
-      } else {
-        //console.log('boo')
-        //evt.preventDefault();
-      } 
+    if (href && href.slice(0, protocol.length) !== protocol && href.indexOf("javascript:") !== 0) {
+      $("#loading").show();
+      evt.preventDefault();
+      app.pageHistory.push(href);
+      console.log('pageHistory:',app.pageHistory);
+      Backbone.history.navigate(href, true);
+    } 
+      
   });
   
-  $('.story-detail').on('swipeLeft', function() { //TODO: move to module
+  /*$('.story-detail').on('swipeLeft', function() { //TODO: move to module
     Backbone.history.navigate('/', true);
-  })
+  });*/
   
-  $(document).on('click', 'body', function(evt) {
-    $(evt.target).trigger('tap');
-    evt.preventDefault();
-  });
+  if (!('touchstart' in window)) {
+    $(document).on('click', 'body', function(evt) {
+      $(evt.target).trigger('tap');
+      evt.preventDefault();
+    });
+  }
 
 });

@@ -61,11 +61,17 @@ footer {
 #back-button {
   background: #333;
   color: #FFF;
-  border-radius: 30px;
-  padding: 9px;
-  margin-left: 10px;
-  width: 18px;
+  border-radius: 10px;
+  padding: 7px;
+  margin: 2px;
+  text-align: center;
+  width: 60px;
   display:block;
+}
+#flag {
+  margin: 0 auto;
+  padding: 0;
+  float: left;
 }
 
 
@@ -118,6 +124,7 @@ footer {
   color: #333;
 }
 
+/* story detail style */
 .story-detail-img {
   width: 100%;
   height: auto;
@@ -135,3 +142,20 @@ footer {
   border-bottom: 2px solid #333;
   margin-bottom: 5px;
 }
+
+
+
+#loading {
+  display: none;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 20%;
+  text-align: center;
+  color: #FFF;
+  background: #333;
+  z-index: 100;
+}
+

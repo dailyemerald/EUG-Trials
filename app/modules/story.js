@@ -46,7 +46,9 @@ function(app, Backbone) {
 
       // Set the template contents.
       this.$el.html(tmpl({ stories: this.collection.toJSON() }));
+      return this;
     }
+    
   });
   
   /*
@@ -90,6 +92,7 @@ function(app, Backbone) {
 
         // Set the template contents.
         this.$el.html(tmpl({story: this.model.toJSON() }));
+        return this;
       } else {
         console.log('dont have a model yet in s v d');
         //this.$el.html("Loading...");
