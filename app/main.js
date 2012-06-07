@@ -35,32 +35,84 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       "": "list",
       "list": "list",
       "story/:id": "detail",
-      "schedule": "schedule"
+      "schedule": "schedule",
+      "photos": "instagram",
+      "twitter": "twitter"
     },
     
     initialize: function(options){
+      this.pageWidth = 800;//window.innerWidth;
+    },
+    
+    show: function () {
+      
+      $('.page').css({"position": "absolute"});
+      
+      var direction_coefficient = 1;//this.options.back ? 1 : -1;
+      
+      if ($('.page').length) {
+          var $old = $('.page').not(this.newView);
+
+          // This fix was hard-won -
+          // just doing .css(property, '') doesn't work!
+          $old.get(0).style["margin-left"] = "";
+          $old.get(0).style["-webkit-transform"] = "";
+
+          console.log('in show', this.newView);
+
+          this.newView.appendTo($('#main')).hide();
+          
+          this.newView.show().css({
+            "margin-left": this.pageWidth * direction_coefficient
+          });
+          
+          this.newView.anim({
+            translate3d: -1*this.pageWidth * direction_coefficient +'px, 0, 0'
+          }, 0.3, 'ease-out', function() {
+            //new view is all the way in
+          });
+          
+          $old.anim({
+            translate3d: -1*this.pageWidth * direction_coefficient + 'px, 0, 0'
+          }, 0.3, 'ease-out', function() {
+            $old.remove();
+            //$('.page').css({"position": "static"});
+          });
+          
+      } else {
+          console.log('only one, so we got...', this.newView);
+          this.newView.appendTo($('#main')).hide();
+          this.newView.show();
+      }
+      window.scrollTo(0, 0);
     },
     
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
     showView: function(selector, view) {
       if (this.currentView) {
-        this.currentView.close();
+        //this.currentView.close();
       }
       
       //view.$el = selector;
       //view.render();
-      //window.scrollTo(0,1);
-      selector.html(view.render().el);
+      //window.scrollTo(0,1
+      this.newView = view.render().$el;
+      console.log(this.newView, "is this.newView now");
+      this.show();
       
-      $("#loading").hide();
+      //console.log('newView', newView);
+      //newView.appendTo( selector );
+      //console.log(selector);
       
-      this.currentView = view;
+      //$("#loading").hide();
+      
+      //this.currentView = view;
       //return view;
     },
     
     list: function() {
       
-      $("#main").html("<h2>Loading stories...</h2>"); //TODO: make this better...
+      //$("#main").html("<h2>Loading stories...</h2>"); //TODO: make this better...
       var list = new Story.Views.List({ 
       });
       
@@ -69,7 +121,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     },
     
     detail: function(id) {
-      $("#main").html("<h2>Loading story view...</h2>"); //TODO: make this better...
+      //$("#main").html("<h2>Loading story view...</h2>"); //TODO: make this better...
       var detail = new Story.Views.Detail({
         id: id
       });
@@ -80,8 +132,16 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     },
     
     schedule: function() {      
-      $("#main").html(scheduleTemplate);
+      //$("#main").html(scheduleTemplate);
       $("#loading").hide();
+    },
+    
+    instagram: function() {
+      console.log('instagram');
+      
+    },
+    twitter: function() {
+      console.log('twitter');
     },
     
     wildcard: function() {
@@ -105,10 +165,11 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       }
     });
 
+    $("#info").hide();
+
     // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
     app.StoryCollectionInstance = new Story.Collection();
-    app.StoryCollectionInstance.fetch();   
-        
+    app.StoryCollectionInstance.fetch();        
     app.router = new Router();
     
     Backbone.history.start({ pushState: true });
@@ -135,10 +196,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       
   });
   
-  /*$('.story-detail').on('swipe', function() { //TODO: move to module
-    Backbone.history.navigate('/', true);
-  });*/
-  
+  // if we don't have a touchstart, make a click trigger a tap. because we're not on a mobile device that supports it. right?
   if (!('touchstart' in window)) {
     $(document).on('click', 'body', function(evt) {
       $(evt.target).trigger('tap');

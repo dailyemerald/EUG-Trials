@@ -31,6 +31,8 @@ function(app, Backbone) {
 
   Story.Views.List = Backbone.View.extend({
     template: "app/templates/story-list",
+    tagName: "section",
+    className: "page",
 
     initialize: function() {
       this.collection = app.StoryCollectionInstance;
@@ -72,6 +74,8 @@ function(app, Backbone) {
   // drill down into one story
   Story.Views.Detail = Backbone.View.extend({
     template: "app/templates/story-detail",
+    tagName: "section",
+    className: "page",
 
     initialize: function() {
       this.collection = app.StoryCollectionInstance;
@@ -80,28 +84,28 @@ function(app, Backbone) {
 
     render: function(done) {
       // Fetch the template.
-      console.log('detail has this.id=',this.id);
-      console.log('this.collection in detail is', this.collection);
+      //console.log('detail has this.id=',this.id);
+      //console.log('this.collection in detail is', this.collection);
       
       this.model = this.collection.get(this.id);
       
       if (this.model) {
    
-        console.log('in story.views.detail', this.model);
+        //console.log('in story.views.detail', this.model);
         var tmpl = app.fetchTemplate(this.template);
 
         // Set the template contents.
         this.$el.html(tmpl({story: this.model.toJSON() }));
         return this;
       } else {
-        console.log('dont have a model yet in s v d');
-        //this.$el.html("Loading...");
+        //console.log('dont have a model yet in s v d');
+        this.$el.html("Waiting for data...");
+        return this;
       }
     }
   });
   
 
- 
-  console.log('in story.js: ', Story);
+  //console.log('in story.js: ', Story);
   return Story;
 });
