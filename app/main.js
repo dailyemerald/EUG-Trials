@@ -12,11 +12,10 @@ require([
   "text!templates/loading.html",
   
   // Modules
-  "modules/example",
   "modules/story"
 ],
 
-function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Example, Story) {
+function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story) {
 
   // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
   Backbone.View.prototype.close = function () {
