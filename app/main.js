@@ -37,7 +37,8 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       "story/:id": "detail",
       "schedule": "schedule",
       "photos": "instagram",
-      "twitter": "twitter"
+      "twitter": "twitter",
+      "*other": "gohome"
     },
     
     initialize: function(options){
@@ -144,8 +145,9 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       console.log('twitter');
     },
     
-    wildcard: function() {
-      //console.log('wildcard route');
+    gohome: function() {
+      console.log('well, this is weird. to /!');
+	  Backbone.history.navigate('/', true);
     }
     
   });
