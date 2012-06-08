@@ -43,7 +43,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     
     initialize: function(options){
       this.pageWidth = window.innerWidth;
-	  this.pageDirection = 1;
+      this.pageDirection = 1;
     },
     
     show: function () {
@@ -70,14 +70,13 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
           
           this.newView.anim({
             translate3d: -1*this.pageWidth * this.pageDirection +'px, 0, 0'			
-          }, 0.5, 'ease-out', function() {
+          }, 0.5, 'linear', function() {
             //new view is all the way in
           });
           
-		  
           $old.anim({
             translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
-          }, 0.5, 'ease-out', function() {
+          }, 0.5, 'linear', function() {
             $old.remove();
             //$('.page').css({"position": "static"});
           });
@@ -129,7 +128,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     detail: function(id) {
       //$("#main").html("<h2>Loading story view...</h2>"); //TODO: make this better...
 
-	  this.pageDirection = 1;
+      this.pageDirection = 1;
 
       var detail = new Story.Views.Detail({
         id: id
