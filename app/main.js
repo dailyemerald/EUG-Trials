@@ -56,9 +56,11 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       }
       
       this.newView = view.render().$el;
+      this.main.html( "..." );
       this.main.html( this.newView ); 
       this.currentView = view;
-      window.scrollTo(0,1);
+      setTimeout(function() { window.scrollTo(0,1);}, 1);
+
       //this.newView.appendTo($('#main'));
 
     },
