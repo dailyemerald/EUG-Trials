@@ -147,7 +147,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     
     gohome: function() {
       console.log('well, this is weird. to /!');
-	  Backbone.history.navigate('/', true);
+      Backbone.history.navigate('/', true);
     }
     
   });
