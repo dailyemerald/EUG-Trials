@@ -12,10 +12,12 @@ require([
   "text!templates/loading.html",
   
   // Modules
-  "modules/story"
+  "modules/story",
+  "modules/instagram",
+  "modules/schedule"
 ],
 
-function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story) {
+function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule) {
 
   // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
   Backbone.View.prototype.close = function () {
@@ -57,31 +59,38 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
 
           // This fix was hard-won -
           // just doing .css(property, '') doesn't work!
-          $old.get(0).style["margin-left"] = "";
-          $old.get(0).style["-webkit-transform"] = "";
+          //$old.get(0).style["margin-left"] = "0px";
+          //$old.get(0).style["-webkit-transform"] = "";
 
           console.log('in show', this.newView);
 
-          this.newView.appendTo($('#main')).hide();
-          
-          this.newView.show().css({
-            "margin-left": this.pageWidth * this.pageDirection
-          });
-          
-          this.newView.anim({
-            translate3d: -1*this.pageWidth * this.pageDirection +'px, 0, 0'			
-          }, 0.5, 'linear', function() {
-            //new view is all the way in
-          });
-          
-          $old.anim({
+          this.newView.appendTo( $('#main') );//.hide();
+          $("#main").css('width', this.pageWidth*2+"px");
+          this.newView.css('left', this.pageWidth+"px");
+          this.newView.css('position', 'absolute');
+          $("#main").anim({
             translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
-          }, 0.5, 'linear', function() {
-            $old.remove();
+          }, 0.3, 'linear', function() {
+            //$old.remove();
             //$('.page').css({"position": "static"});
           });
           
-
+          
+          /*
+          $old.anim({
+            translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
+          }, 0.3, 'linear', function() {
+            $old.remove();
+            $('.page').css({"position": "static"});
+          });
+         
+          this.newView.anim({
+              translate3d: -1*this.pageWidth * this.pageDirection +'px, 0, 0'			
+          }, 0.3, 'linear', function() {
+              //new view is all the way in
+          }); 
+          */
+  
       } else {
           console.log('only one, so we got...', this.newView);
           this.newView.appendTo($('#main')).hide();
@@ -140,13 +149,13 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     },
     
     schedule: function() {      
-      //$("#main").html(scheduleTemplate);
-      $("#loading").hide();
+      var view_ = new Schedule.Views.Master();
+      this.showView($('#main'), view_);
     },
     
     instagram: function() {
-      console.log('instagram');
-      
+      var view_ = new Instagram.Views.Master();
+      this.showView($('#main'), view_);
     },
     twitter: function() {
       console.log('twitter');
