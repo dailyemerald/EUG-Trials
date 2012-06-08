@@ -1,0 +1,7 @@
+http://trialsdev.dailyemerald.com is running the live-ish code.
+
+You should be able to run it by installing Backbone Boilerplate with npm install -g bbb
+
+Then "bbb server" will spin it up. It's consuming a JSONP feed out of our WP backend.
+
+TODO: Write a README that isn't useless.

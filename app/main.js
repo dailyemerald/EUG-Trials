@@ -44,136 +44,49 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     },
     
     initialize: function(options){
+      this.main = $('#main'); // cache the selector. is this useful?
       this.pageWidth = window.innerWidth;
       this.pageDirection = 1;
     },
     
-    show: function () {
-      
-      //$('.page').css({"position": "absolute"});
-      
-      //var direction_coefficient = 1;//this.options.back ? 1 : -1;
-      
-      if ($('.page').length) {
-          var $old = $('.page').not(this.newView);
-
-          // This fix was hard-won -
-          // just doing .css(property, '') doesn't work!
-          //$old.get(0).style["margin-left"] = "0px";
-          //$old.get(0).style["-webkit-transform"] = "";
-
-          console.log('in show', this.newView);
-
-          this.newView.css('position', 'relative');
-          this.newView.css('top', '0');
-          this.newView.css('margin-left', '100%');
-
-          this.newView.appendTo( $('#main') );//.hide();
-
-          //$("#main").css('width', this.pageWidth*2+"px");
-          //this.newView.css('left', this.pageWidth+"px");
-          
-          //this.newView.css('position', 'absolute');
-          //this.newView.css('left', '100%');
-          
-          $("#main").css('margin-left', '-100%');
-          
-          /*
-          $("#main").anim({
-            translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
-          }, 0.3, 'linear', function() {
-            //$old.remove();
-            //$('.page').css({"position": "static"});
-          });
-  */
-          //this.newView.addClass('slideleft in current');
-          //$old.addClass('slideleft out');
-          
-          /*
-          $old.anim({
-            translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
-          }, 0.3, 'linear', function() {
-            $old.remove();
-            $('.page').css({"position": "static"});
-          });
-         
-          this.newView.anim({
-              translate3d: -1*this.pageWidth * this.pageDirection +'px, 0, 0'			
-          }, 0.3, 'linear', function() {
-              //new view is all the way in
-          }); 
-          */
-  
-      } else {
-          console.log('only one, so we got...', this.newView);
-          this.newView.appendTo($('#main')).hide();
-          this.newView.show();
-      }
-      window.scrollTo(0, 0);
-    },
-    
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
-    showView: function(selector, view) {
+    showView: function(view) {
       if (this.currentView) {
-        //this.currentView.close();
+        this.currentView.close();
       }
       
-      //view.$el = selector;
-      //view.render();
-      //window.scrollTo(0,1
       this.newView = view.render().$el;
-      console.log(this.newView, "is this.newView now");
-      this.show();
-      
-      //console.log('newView', newView);
-      //newView.appendTo( selector );
-      //console.log(selector);
-      
-      //$("#loading").hide();
-      
-      //this.currentView = view;
-      //return view;
+      this.main.html( this.newView ); 
+           
+      //this.newView.appendTo($('#main'));
+
     },
     
     list: function() {
 
-      this.pageDirection = -1;
-
-      //$("#main").html("<h2>Loading stories...</h2>"); //TODO: make this better...
-      var list = new Story.Views.List({ 
-      });
-      
-      this.showView($('#main'), list);
+      //this.pageDirection = -1;
+      var list = new Story.Views.List({ });   
+      this.showView(list);
     
     },
     
     detail: function(id) {
-      //$("#main").html("<h2>Loading story view...</h2>"); //TODO: make this better...
+      //this.pageDirection = 1;
 
-      this.pageDirection = 1;
-
-      var detail = new Story.Views.Detail({
-        id: id
-      });
-      
-      this.showView($('#main'), detail);
-
-      //setTimeout(function () { window.scrollTo(0,1); }, 1);
+      var detail = new Story.Views.Detail({ id: id });
+      this.showView(detail);
     },
     
     schedule: function() {      
       var view_ = new Schedule.Views.Master();
-      this.showView($('#main'), view_);
+      this.showView(view_);
     },
     
     instagram: function() {
       var view_ = new Instagram.Views.Master();
-      this.showView($('#main'), view_);
+      this.showView(view_);
     },
-    twitter: function() {
-      console.log('twitter');
-    },
-    
+   
     gohome: function() {
       console.log('well, this is weird. to /!');
       Backbone.history.navigate('/', true);
