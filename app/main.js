@@ -50,7 +50,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     
     show: function () {
       
-      $('.page').css({"position": "absolute"});
+      //$('.page').css({"position": "absolute"});
       
       //var direction_coefficient = 1;//this.options.back ? 1 : -1;
       
@@ -64,17 +64,30 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
 
           console.log('in show', this.newView);
 
+          this.newView.css('position', 'relative');
+          this.newView.css('top', '0');
+          this.newView.css('margin-left', '100%');
+
           this.newView.appendTo( $('#main') );//.hide();
-          $("#main").css('width', this.pageWidth*2+"px");
-          this.newView.css('left', this.pageWidth+"px");
-          this.newView.css('position', 'absolute');
+
+          //$("#main").css('width', this.pageWidth*2+"px");
+          //this.newView.css('left', this.pageWidth+"px");
+          
+          //this.newView.css('position', 'absolute');
+          //this.newView.css('left', '100%');
+          
+          $("#main").css('margin-left', '-100%');
+          
+          /*
           $("#main").anim({
             translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
           }, 0.3, 'linear', function() {
             //$old.remove();
             //$('.page').css({"position": "static"});
           });
-          
+  */
+          //this.newView.addClass('slideleft in current');
+          //$old.addClass('slideleft out');
           
           /*
           $old.anim({
