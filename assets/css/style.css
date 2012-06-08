@@ -46,7 +46,9 @@ header {
   -webkit-overflow-scrolling: touch;
   padding: 40px 1%;
 }
-
+.page {
+	width: 100%;
+}
 footer {
   position: fixed;
   bottom: 0;

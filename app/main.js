@@ -42,14 +42,15 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     },
     
     initialize: function(options){
-      this.pageWidth = 800;//window.innerWidth;
+      this.pageWidth = window.innerWidth;
+	  this.pageDirection = 1;
     },
     
     show: function () {
       
       $('.page').css({"position": "absolute"});
       
-      var direction_coefficient = 1;//this.options.back ? 1 : -1;
+      //var direction_coefficient = 1;//this.options.back ? 1 : -1;
       
       if ($('.page').length) {
           var $old = $('.page').not(this.newView);
@@ -64,22 +65,24 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
           this.newView.appendTo($('#main')).hide();
           
           this.newView.show().css({
-            "margin-left": this.pageWidth * direction_coefficient
+            "margin-left": this.pageWidth * this.pageDirection
           });
           
           this.newView.anim({
-            translate3d: -1*this.pageWidth * direction_coefficient +'px, 0, 0'
-          }, 0.3, 'ease-out', function() {
+            translate3d: -1*this.pageWidth * this.pageDirection +'px, 0, 0'			
+          }, 0.5, 'ease-out', function() {
             //new view is all the way in
           });
           
+		  
           $old.anim({
-            translate3d: -1*this.pageWidth * direction_coefficient + 'px, 0, 0'
-          }, 0.3, 'ease-out', function() {
+            translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
+          }, 0.5, 'ease-out', function() {
             $old.remove();
             //$('.page').css({"position": "static"});
           });
           
+
       } else {
           console.log('only one, so we got...', this.newView);
           this.newView.appendTo($('#main')).hide();
@@ -112,7 +115,9 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     },
     
     list: function() {
-      
+
+      this.pageDirection = -1;
+
       //$("#main").html("<h2>Loading stories...</h2>"); //TODO: make this better...
       var list = new Story.Views.List({ 
       });
@@ -123,6 +128,9 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     
     detail: function(id) {
       //$("#main").html("<h2>Loading story view...</h2>"); //TODO: make this better...
+
+	  this.pageDirection = 1;
+
       var detail = new Story.Views.Detail({
         id: id
       });
