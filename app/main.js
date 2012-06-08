@@ -21,7 +21,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
 
   // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
   Backbone.View.prototype.close = function () {
-      console.log('in our new close method...', this);
+      console.log('close()-ing view:', this);
       if (this.beforeClose) {
           this.beforeClose();
       }
@@ -46,7 +46,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     initialize: function(options){
       this.main = $('#main'); // cache the selector. is this useful?
       this.pageWidth = window.innerWidth;
-      this.pageDirection = 1;
+      //this.pageDirection = 1;
     },
     
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
@@ -57,7 +57,8 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       
       this.newView = view.render().$el;
       this.main.html( this.newView ); 
-           
+      this.currentView = view;
+      window.scrollTo(0,1);
       //this.newView.appendTo($('#main'));
 
     },

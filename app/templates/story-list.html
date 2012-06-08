@@ -1,9 +1,22 @@
-<ul>
+<div id="story-list-wrapper">
+<ul id="story-list-ul">
 <% _.each(stories, function(story) { %> 
 	<li>
+		<div class="story-list-liner">
+		
 		<a href="/story/<%= story.id %>">
-			<h3><%= story.title %></h3>
+			
+			<% if (typeof story.thumbnail === "string") { %>
+				<img class="story-list-item-img" src="<%= story.thumbnail %>"></img>
+			<% } else { %>
+			    <img class="story-list-item-img" src="http://dev.dailyemerald.com/emerald114.png"></img>
+			<% } %>	
+
+			<h3 class="story-list-item-title"><%= story.title %></h3>
 		</a>
+		
+		</div><!-- story-list-liner -->
 	</li> 
 <% }); %>
 </ul>
+</div>

@@ -316,7 +316,7 @@ var requirejs, require, define;
 this['JST'] = this['JST'] || {};
 
 this['JST']['app/templates/story-detail.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="story-detail">\n<h2>', story.title ,'</h2>\n<img class="story-detail-img" src="', story.thumbnail ,'">\n<p style="story-detail-byline">By ', story.author ,'</p>\n<p>', story.date ,'</p>\n<div class="story-detail-break"></div>\n<p>', story.content ,'</p>\n</div><!-- .story-detail -->');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="story-detail">\n\t<h2 class="story-detail-title">', story.title ,'</h2>\n\n\t'); if (typeof story.thumbnail === "string") { ;__p.push('\n\t\t<img class="story-detail-img" src="', story.thumbnail ,'">\n\t'); } ;__p.push('\n\n\t<div class="story-detail-metabox">\n\t\t<p style="story-detail-byline">By ', story.author ,'</p>\n\t\t<p>', story.date ,'</p>\n\t</div>\n\n\t<p>', story.content ,'</p>\n</div><!-- .story-detail -->');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/header.html'] = function(data) { return function (obj,_) {
@@ -328,7 +328,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/instagram.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<p>This is a feed of Instagram photos near the UO. Geotag yours!</p>\n<iframe src="http://dev.dailyemerald.com:8100/embed.html" width="100%" height="100%" frameborder="0"></iframe>');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<p>This is a feed of Instagram photos near the UO. Geotag yours!</p>\n<iframe src="http://dev.dailyemerald.com:8100/embed.html" width="100%" height="100%" frameborder="0" style="border:0;margin-left:5px;"></iframe>');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/loading.html'] = function(data) { return function (obj,_) {
@@ -340,7 +340,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/story-list.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<ul>\n'); _.each(stories, function(story) { ;__p.push(' \n\t<li>\n\t\t<a href="/story/', story.id ,'">\n\t\t\t<h3>', story.title ,'</h3>\n\t\t</a>\n\t</li> \n'); }); ;__p.push('\n</ul>');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div id="story-list-wrapper">\n<ul id="story-list-ul">\n'); _.each(stories, function(story) { ;__p.push(' \n\t<li>\n\t\t<div class="story-list-liner">\n\t\t\n\t\t<a href="/story/', story.id ,'">\n\t\t\t\n\t\t\t'); if (typeof story.thumbnail === "string") { ;__p.push('\n\t\t\t\t<img class="story-list-item-img" src="', story.thumbnail ,'"></img>\n\t\t\t'); } else { ;__p.push('\n\t\t\t    <img class="story-list-item-img" src="http://dev.dailyemerald.com/emerald114.png"></img>\n\t\t\t'); } ;__p.push('\t\n\n\t\t\t<h3 class="story-list-item-title">', story.title ,'</h3>\n\t\t</a>\n\t\t\n\t\t</div><!-- story-list-liner -->\n\t</li> \n'); }); ;__p.push('\n</ul>\n</div>');}return __p.join('');
 }(data, _)};
 
 /* Zepto v1.0rc1 - polyfill zepto event detect fx ajax form touch - zeptojs.com/license */
@@ -6990,7 +6990,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
 
   // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
   Backbone.View.prototype.close = function () {
-      console.log('in our new close method...', this);
+      console.log('close()-ing view:', this);
       if (this.beforeClose) {
           this.beforeClose();
       }
@@ -7015,7 +7015,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     initialize: function(options){
       this.main = $('#main'); // cache the selector. is this useful?
       this.pageWidth = window.innerWidth;
-      this.pageDirection = 1;
+      //this.pageDirection = 1;
     },
     
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
@@ -7026,7 +7026,8 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       
       this.newView = view.render().$el;
       this.main.html( this.newView ); 
-           
+      this.currentView = view;
+      window.scrollTo(0,1);
       //this.newView.appendTo($('#main'));
 
     },
