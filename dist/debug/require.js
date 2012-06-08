@@ -320,7 +320,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/header.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<!--<a href="#" id="back-button">BACK</a>-->\n<div id="flag">EUG Trials</div>\n');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<!--<a href="#" id="back-button">BACK</a>-->\n\n<div id="flag">EUG Trials</div>\n');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/footer.html'] = function(data) { return function (obj,_) {
@@ -6786,7 +6786,7 @@ define('text',['module'], function (module) {
 
     return text;
 });
-define('text!templates/header.html',[],function () { return '<!--<a href="#" id="back-button">BACK</a>-->\n<div id="flag">EUG Trials</div>\n';});
+define('text!templates/header.html',[],function () { return '<!--<a href="#" id="back-button">BACK</a>-->\n\n<div id="flag">EUG Trials</div>\n';});
 
 define('text!templates/footer.html',[],function () { return '<div class="nav-wrapper">\n\t<div class="nav-button">\n\t\t<a href="/">News</a>\n\t</div>\n\t<div class="nav-button">\n\t\t<a href="/schedule">Schedule</a>\n\t</div>\n\t<div class="nav-button">\n\t\t<a href="/photos">Fan Pics</a>\n\t</div>\n</div>';});
 
@@ -7013,125 +7013,51 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     },
     
     initialize: function(options){
+      this.main = $('#main'); // cache the selector. is this useful?
       this.pageWidth = window.innerWidth;
       this.pageDirection = 1;
     },
     
-    show: function () {
-      
-      $('.page').css({"position": "absolute"});
-      
-      //var direction_coefficient = 1;//this.options.back ? 1 : -1;
-      
-      if ($('.page').length) {
-          var $old = $('.page').not(this.newView);
-
-          // This fix was hard-won -
-          // just doing .css(property, '') doesn't work!
-          //$old.get(0).style["margin-left"] = "0px";
-          //$old.get(0).style["-webkit-transform"] = "";
-
-          console.log('in show', this.newView);
-
-          this.newView.appendTo( $('#main') );//.hide();
-          $("#main").css('width', this.pageWidth*2+"px");
-          this.newView.css('left', this.pageWidth+"px");
-          this.newView.css('position', 'absolute');
-          $("#main").anim({
-            translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
-          }, 0.3, 'linear', function() {
-            //$old.remove();
-            //$('.page').css({"position": "static"});
-          });
-          
-          
-          /*
-          $old.anim({
-            translate3d: -1*this.pageWidth * this.pageDirection + 'px, 0, 0'
-          }, 0.3, 'linear', function() {
-            $old.remove();
-            $('.page').css({"position": "static"});
-          });
-         
-          this.newView.anim({
-              translate3d: -1*this.pageWidth * this.pageDirection +'px, 0, 0'			
-          }, 0.3, 'linear', function() {
-              //new view is all the way in
-          }); 
-          */
-  
-      } else {
-          console.log('only one, so we got...', this.newView);
-          this.newView.appendTo($('#main')).hide();
-          this.newView.show();
-      }
-      window.scrollTo(0, 0);
-    },
-    
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
-    showView: function(selector, view) {
+    showView: function(view) {
       if (this.currentView) {
-        //this.currentView.close();
+        this.currentView.close();
       }
       
-      //view.$el = selector;
-      //view.render();
-      //window.scrollTo(0,1
       this.newView = view.render().$el;
-      console.log(this.newView, "is this.newView now");
-      this.show();
-      
-      //console.log('newView', newView);
-      //newView.appendTo( selector );
-      //console.log(selector);
-      
-      //$("#loading").hide();
-      
-      //this.currentView = view;
-      //return view;
+      this.main.html( this.newView ); 
+           
+      //this.newView.appendTo($('#main'));
+
     },
     
     list: function() {
 
-      this.pageDirection = -1;
-
-      //$("#main").html("<h2>Loading stories...</h2>"); //TODO: make this better...
-      var list = new Story.Views.List({ 
-      });
-      
-      this.showView($('#main'), list);
+      //this.pageDirection = -1;
+      var list = new Story.Views.List({ });   
+      this.showView(list);
     
     },
     
     detail: function(id) {
-      //$("#main").html("<h2>Loading story view...</h2>"); //TODO: make this better...
+      //this.pageDirection = 1;
 
-      this.pageDirection = 1;
-
-      var detail = new Story.Views.Detail({
-        id: id
-      });
-      
-      this.showView($('#main'), detail);
-
-      //setTimeout(function () { window.scrollTo(0,1); }, 1);
+      var detail = new Story.Views.Detail({ id: id });
+      this.showView(detail);
     },
     
     schedule: function() {      
       var view_ = new Schedule.Views.Master();
-      this.showView($('#main'), view_);
+      this.showView(view_);
     },
     
     instagram: function() {
       var view_ = new Instagram.Views.Master();
-      this.showView($('#main'), view_);
+      this.showView(view_);
     },
-    twitter: function() {
-      console.log('twitter');
-    },
-    
+   
     gohome: function() {
-      console.log('well, this is weird. to /!');
+      console.log('well, this is weird. to /');
       Backbone.history.navigate('/', true);
     }
     

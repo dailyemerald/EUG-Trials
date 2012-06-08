@@ -18,9 +18,7 @@ html, body {
   /*overflow: hidden;*/
 }
 
-
 /* layout */
-
 
 .page a {
   color: #666;
@@ -47,6 +45,7 @@ header {
   display: block; 
   font-size: 25px
 }
+
 
 #wrapper {
   position: relative;
