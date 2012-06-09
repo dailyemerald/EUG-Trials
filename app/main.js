@@ -34,9 +34,9 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
     routes: {
-      "": "list",
-      "list": "list",
-      "story/:id": "detail",
+      "": "storyMaster",
+      "list": "storyMaster",
+      "story/:id": "storyDetail",
       "schedule": "schedule",
       "photos": "instagram",
       "twitter": "twitter",
@@ -45,35 +45,39 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     
     initialize: function(options){
       this.main = $('#main'); // cache the selector. is this useful?
-      this.pageWidth = window.innerWidth;
+      //this.pageWidth = window.innerWidth;
       //this.pageDirection = 1;
     },
     
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
     showView: function(view) {
+      
       if (this.currentView) {
         this.currentView.close();
       }
       
+      
       this.newView = view.render().$el;
-      this.main.html( "..." );
-      this.main.html( this.newView ); 
-      this.currentView = view;
+      this.main.hide();
+      this.main.html(this.newView);
+      this.main.show();
+      
+
       //setTimeout(function() { window.scrollTo(0,1);}, 1);
 
       //this.newView.appendTo($('#main'));
 
     },
     
-    list: function() {
+    storyMaster: function() {
 
       //this.pageDirection = -1;
-      var list = new Story.Views.List({ });   
+      var list = new Story.Views.Master({ });   
       this.showView(list);
     
     },
     
-    detail: function(id) {
+    storyDetail: function(id) {
       //this.pageDirection = 1;
 
       var detail = new Story.Views.Detail({ id: id });
@@ -104,7 +108,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
 
     $("header").html(headerTemplate);
     $("footer").html(footerTemplate);
-    $("body").append(loadingTemplate);
+    //$("body").append(loadingTemplate);
     $("#back-button").tap(function(evt) {
       if (app.pageHistory.length > 1) {
         //evt.preventDefault();
@@ -112,12 +116,14 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       }
     });
 
-    $("#info").hide();
+   // $("#info").hide();
 
     // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
     app.StoryCollectionInstance = new Story.Collection();
     app.StoryCollectionInstance.fetch();        
     app.router = new Router();
+    
+    setTimeout(function() { window.scrollTo(0,1) }, 1);
     
     Backbone.history.start({ pushState: true });
   });

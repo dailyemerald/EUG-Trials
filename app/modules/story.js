@@ -29,8 +29,8 @@ function(app, Backbone) {
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-  Story.Views.List = Backbone.View.extend({
-    template: "app/templates/story-list",
+  Story.Views.Master = Backbone.View.extend({
+    template: "app/templates/story-master",
     tagName: "section",
     className: "page",
 
@@ -48,6 +48,8 @@ function(app, Backbone) {
 
       // Set the template contents.
       this.$el.html(tmpl({ stories: this.collection.toJSON() }));
+      //console.log(this.$el);
+      
       return this;
     }
     
