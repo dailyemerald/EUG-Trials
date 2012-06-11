@@ -1,12 +1,12 @@
 define([
   // Global application context.
   "app",
-
+  "zepto", // TODO: remove. see L22 for the hide() which is awful
   // Third-party libraries.
   "backbone"
 ],
 
-function(app, Backbone) {
+function(app, $, Backbone) {
   
   var Story = app.module();
 
@@ -19,6 +19,7 @@ function(app, Backbone) {
     url: 'http://dailyemerald.com/section/track-field/json?callback=?',
     parse: function(data) {
       console.log('Story.Collection: json data into parse:', data);
+      $("#loading").hide(); //TODO: this sucks.
       return data;
     }
     

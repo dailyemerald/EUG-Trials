@@ -58,9 +58,33 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       
       
       this.newView = view.render().$el;
-      this.main.hide();
-      this.main.html(this.newView);
-      this.main.show();
+      
+      window.viewCache = null;
+      window.viewCache = this.newView;
+
+      $('#main').html('<div id="intermediate"></div>');
+    
+      $('#main').animate({translate3d: '0,0,0', opacity:0}, 1, 'linear', function() {
+
+        //$(".page").hide();
+
+        $('#main').html( window.viewCache ).animate({
+          translate3d: '0,0,0', 
+          opacity:1}, 
+          1, 
+          'linear', 
+          function() {
+            
+            window.setTimeout(function() { 
+                $('#main').get(0).style["-webkit-transform"] = "";
+                //$('#main').get(0).style["-webkit-transition"] = "";
+              }, 1); 
+          });
+        });
+      
+      
+      
+
       
 
       //setTimeout(function() { window.scrollTo(0,1);}, 1);
@@ -153,6 +177,12 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   if (!('touchstart' in window)) {
     $(document).on('click', 'body', function(evt) {
       $(evt.target).trigger('tap');
+      evt.preventDefault();
+    });
+  } else {
+    $(document).on('click', 'body', function(evt) {
+      //$(evt.target).trigger('tap');
+      alert('got a click, even though we have touchstart')
       evt.preventDefault();
     });
   }
