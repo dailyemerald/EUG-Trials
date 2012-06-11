@@ -1,14 +1,14 @@
 var phantom = require('phantom');
 
 var prefix = "http://localhost:8888/";
-var urls = ['', 'schedule', '404', 'photos'];
+var urls = ['', 'schedule', '404', 'photos','story/2256435'];
 
 phantom.create(function(ph) {
 
     urls.forEach(function(url) {
         var url = prefix + url;
         ph.createPage(function(page) {
-          
+            
             page.open(url, function(status) {
 
                 setTimeout(function() {
