@@ -62,8 +62,11 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       window.viewCache = null;
       window.viewCache = this.newView;
 
-      $('#main').html('<div id="intermediate"></div>');
+      //$('#main').html('<div id="intermediate"></div>');
     
+     $('#main').html( window.viewCache );
+    
+    /*
       $('#main').animate({translate3d: '0,0,0', opacity:0}, 1, 'linear', function() {
 
         //$(".page").hide();
@@ -81,6 +84,8 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
               }, 1); 
           });
         });
+        
+        */
       
       
       
@@ -147,7 +152,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     app.StoryCollectionInstance.fetch();        
     app.router = new Router();
     
-    setTimeout(function() { window.scrollTo(0,1) }, 1);
+    setTimeout(function() { window.scrollTo(0,1); }, 1);
     
     Backbone.history.start({ pushState: true });
   });
@@ -156,7 +161,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   // method, to be processed by the router.  If the link has a data-bypass
   // attribute, bypass the delegation completely.
   //$(document).on(mobileTapEvent, "a:not([data-bypass])", function(evt) {
-  $(document).on('tap', 'a:not([data-bypass])', function(evt) {
+  $(document).on('singleTap', 'a:not([data-bypass])', function(evt) {
     //console.log('inside', mobileTapEvent, "handler");
  
     var href = $(this).attr("href");
@@ -176,15 +181,9 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   // if we don't have a touchstart, make a click trigger a tap. because we're not on a mobile device that supports it. right?
   if (!('touchstart' in window)) {
     $(document).on('click', 'body', function(evt) {
-      $(evt.target).trigger('tap');
+      $(evt.target).trigger('singleTap');
       evt.preventDefault();
     });
-  } else {
-    $(document).on('click', 'body', function(evt) {
-      //$(evt.target).trigger('tap');
-      alert('got a click, even though we have touchstart')
-      evt.preventDefault();
-    });
-  }
+  } 
 
 });

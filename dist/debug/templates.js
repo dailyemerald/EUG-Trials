@@ -1,7 +1,7 @@
 this['JST'] = this['JST'] || {};
 
 this['JST']['app/templates/story-master.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div id="story-list-wrapper">\n<ul id="story-list-ul">\n'); _.each(stories, function(story) { ;__p.push(' \n\t<li>\n\t\t<div class="story-list-liner">\n\t\t\n\t\t<a href="/story/', story.id ,'">\n\t\t\t\n\t\t\t'); if (typeof story.thumbnail === "string") { ;__p.push('\n\t\t\t\t<img class="story-list-item-img" src="', story.thumbnail ,'"></img>\n\t\t\t'); } else { ;__p.push('\n\t\t\t    <img class="story-list-item-img" src="http://dev.dailyemerald.com/emerald114.png"></img>\n\t\t\t'); } ;__p.push('\t\n\n\t\t\t<h3 class="story-list-item-title">', story.title ,'</h3>\n\t\t</a>\n\t\t\n\t\t</div><!-- story-list-liner -->\n\t</li> \n'); }); ;__p.push('\n</ul>\n</div>');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div id="story-list-wrapper">\n<ul id="story-list-ul">\n'); _.each(stories, function(story) { ;__p.push(' \n\n\t');   if (typeof story.thumbnail === "string") {     var backgroundimage =  story.thumbnail;  } else {    var backgroundimage = "http://dev.dailyemerald.com/emerald114.png";  }   ;__p.push('\n\t\n\t<li style="background-image: url(', backgroundimage ,')">\n\t\t\n\t\t\n\t\t<a href="/story/', story.id ,'">\n\t\t\t\n\t\t\t<div class="story-list-item-title">', story.title ,'</div>\n\t\t</a>\n\t\t\n\n\t</li> \n'); }); ;__p.push('\n</ul>\n</div>');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/story-detail.html'] = function(data) { return function (obj,_) {
@@ -13,7 +13,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/footer.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="nav-wrapper">\n\t<div class="nav-button">\n\t\t<a href="/">News</a>\n\t</div>\n\t<div class="nav-button">\n\t\t<a href="/schedule">Schedule</a>\n\t</div>\n\t<div class="nav-button">\n\t\t<a href="/photos">Fan Pics</a>\n\t</div>\n</div>');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="nav-wrapper">\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/">News</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/schedule">Schedule</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/photos">Fan Photos</a></span>\n\t</div>\n</div>');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/instagram.html'] = function(data) { return function (obj,_) {
