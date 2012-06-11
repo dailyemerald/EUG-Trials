@@ -315,6 +315,10 @@ var requirejs, require, define;
 
 this['JST'] = this['JST'] || {};
 
+this['JST']['app/templates/story-master.html'] = function(data) { return function (obj,_) {
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div id="story-list-wrapper">\n<ul id="story-list-ul">\n'); _.each(stories, function(story) { ;__p.push(' \n\t<li>\n\t\t<div class="story-list-liner">\n\t\t\n\t\t<a href="/story/', story.id ,'">\n\t\t\t\n\t\t\t'); if (typeof story.thumbnail === "string") { ;__p.push('\n\t\t\t\t<img class="story-list-item-img" src="', story.thumbnail ,'"></img>\n\t\t\t'); } else { ;__p.push('\n\t\t\t    <img class="story-list-item-img" src="http://dev.dailyemerald.com/emerald114.png"></img>\n\t\t\t'); } ;__p.push('\t\n\n\t\t\t<h3 class="story-list-item-title">', story.title ,'</h3>\n\t\t</a>\n\t\t\n\t\t</div><!-- story-list-liner -->\n\t</li> \n'); }); ;__p.push('\n</ul>\n</div>');}return __p.join('');
+}(data, _)};
+
 this['JST']['app/templates/story-detail.html'] = function(data) { return function (obj,_) {
 var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="story-detail">\n\t<h2 class="story-detail-title">', story.title ,'</h2>\n\n\t'); if (typeof story.thumbnail === "string") { ;__p.push('\n\t\t<img class="story-detail-img" src="', story.thumbnail ,'">\n\t'); } ;__p.push('\n\n\t<div class="story-detail-metabox">\n\t\t<p style="story-detail-byline">By ', story.author ,'</p>\n\t\t<p>', story.date ,'</p>\n\t</div>\n\n\t<p>', story.content ,'</p>\n</div><!-- .story-detail -->');}return __p.join('');
 }(data, _)};
@@ -336,11 +340,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/schedule.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('The schedule goes here.');}return __p.join('');
-}(data, _)};
-
-this['JST']['app/templates/story-list.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div id="story-list-wrapper">\n<ul id="story-list-ul">\n'); _.each(stories, function(story) { ;__p.push(' \n\t<li>\n\t\t<div class="story-list-liner">\n\t\t\n\t\t<a href="/story/', story.id ,'">\n\t\t\t\n\t\t\t'); if (typeof story.thumbnail === "string") { ;__p.push('\n\t\t\t\t<img class="story-list-item-img" src="', story.thumbnail ,'"></img>\n\t\t\t'); } else { ;__p.push('\n\t\t\t    <img class="story-list-item-img" src="http://dev.dailyemerald.com/emerald114.png"></img>\n\t\t\t'); } ;__p.push('\t\n\n\t\t\t<h3 class="story-list-item-title">', story.title ,'</h3>\n\t\t</a>\n\t\t\n\t\t</div><!-- story-list-liner -->\n\t</li> \n'); }); ;__p.push('\n</ul>\n</div>');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div id="schedulewrapper">\n<ul>\n<li class="dateheader">\n6/21/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">10:45:00</div> : \n  Hammer Throw\n  (Women - Trials)\n</li>\n\n<li>\n  <div class="time" style="display:inline">13:00:00</div> : \n  Hammer Throw\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00:00</div> : \n  Hammer Throw\n  (Men - Trials)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:00:00</div> : \n  Hammer Throw\n  (Men - Final)\n</li>\n\n<li class="dateheader">\n6/22/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">13:00:00</div> : \n  100m\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">1:50:00</div> : \n  Long Jump\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:20:00</div> : \n  Discus Throw\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:05:00</div> : \n  Shot Put\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:10:00</div> : \n  400m\n  (Men - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:35:00</div> : \n  400m\n  (Women - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:00:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:30:00</div> : \n  High Jump\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:00:00</div> : \n  800m\n  (Women - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:20:00</div> : \n  800m\n  (Men - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:30:00</div> : \n  Pole Vault\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:40:00</div> : \n  100m Hurdles\n  (Women - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:45:00</div> : \n  Long Jump\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:00:00</div> : \n  100m\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:30:00</div> : \n  400m\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:45:00</div> : \n  10,000m\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:20:00</div> : \n  10,000m\n  (Women - Final)\n</li>\n\n<li class="dateheader">\n6/23/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">9:30:00</div> : \n  110m Hurdles\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">10:20:00</div> : \n  Discus Throw\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">12:30:00</div> : \n  Pole Vault\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">12:30:00</div> : \n  Javelin Throw\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00:00</div> : \n  Shot Put\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00:00</div> : \n  Javelin Throw\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:10:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:15:00</div> : \n  100m Hurdles\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:20:00</div> : \n  Triple Jump\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:40:00</div> : \n  100m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:00:00</div> : \n  100m\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:20:00</div> : \n  High Jump\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:30:00</div> : \n  800m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:45:00</div> : \n  800m\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:00:00</div> : \n  400m\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:15:00</div> : \n  400m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:30:00</div> : \n  1,500m\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:45:00</div> : \n  100m Hurdles\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:52:00</div> : \n  100m\n  (Women - Final)\n</li>\n\n<li class="dateheader">\n6/24/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">14:25:00</div> : \n  Pole Vault\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:30:00</div> : \n  100m\n  (Men - Semi-Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:55:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00:00</div> : \n  Long Jump\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:05:00</div> : \n  Discus Throw\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:30:00</div> : \n  Shot Put\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:20:00</div> : \n  400m\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:35:00</div> : \n  400m\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:48:00</div> : \n  100m\n  (Men - Final)\n</li>\n\n<li class="dateheader">\n6/25/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">15:30:00</div> : \n  Discus Throw\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:50:00</div> : \n  3,000m Steeplechase\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:20:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:25:00</div> : \n  3,000m Steeplechase\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:30:00</div> : \n  Pole Vault\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:45:00</div> : \n  Triple Jump\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:50:00</div> : \n  High Jump\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:00:00</div> : \n  Javelin Throw\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:05:00</div> : \n  5,000m\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:50:00</div> : \n  800m\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:00:00</div> : \n  5,000m\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:47:00</div> : \n  800m\n  (Men - Final)\n</li>\n\n<li class="dateheader">\n6/26/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline"></div> : \n  \n  ( - )\n</li>\n\n<li class="dateheader">\n6/27/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline"></div> : \n  \n  ( - )\n</li>\n\n<li class="dateheader">\n6/28/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">15:45:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:00:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:15:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:20:00</div> : \n  1,500m\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:30:00</div> : \n  Triple Jump\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:50:00</div> : \n  1,500m\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">17:00:00</div> : \n  High Jump\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">17:05:00</div> : \n  Pole Vault\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">17:30:00</div> : \n  400m Hurdles\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">17:40:00</div> : \n  Shot Put\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">18:00:00</div> : \n  400m Hurdles\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">18:05:00</div> : \n  Discus Throw\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">18:30:00</div> : \n  3,000m Steeplechase\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">18:45:00</div> : \n  200m\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">19:15:00</div> : \n  5,000m\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">19:38:00</div> : \n  5,000m\n  (Men - Final)\n</li>\n\n<li class="dateheader">\n6/29/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">10:30am</div> : \n  100m Hurdles\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">11:30am</div> : \n  High Jump\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">1:15pm</div> : \n  Shot Put\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">1:45pm</div> : \n  200m\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:15pm</div> : \n  200m\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:30pm</div> : \n  Javelin Throw\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:35pm</div> : \n  Mile\n  (Nike HS Girls - Exhibition Event)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:45pm</div> : \n  Mile\n  (Nike HS Boys - Exhibition Event)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:55pm</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00pm</div> : \n  200m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:20pm</div> : \n  400m Hurdles\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:30pm</div> : \n  Shot Put\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:30pm</div> : \n  Long Jump\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:35pm</div> : \n  400m Hurdles\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:45pm</div> : \n  1,500m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:05pm</div> : \n  110m Hurdles\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:25pm</div> : \n  1,500m\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:45pm</div> : \n  3,000m Steeplechase\n  (Women - Final)\n</li>\n\n<li class="dateheader">\n6/30/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:30am</div> : \n  20km Race Walk\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00pm</div> : \n  Long Jump\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:45pm</div> : \n  100m\n  (Boys &amp; Girls - Special Olympics)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:10pm</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:15pm</div> : \n  Javelin Throw\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:20pm</div> : \n  110m Hurdles\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:40pm</div> : \n  Triple Jump\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:00pm</div> : \n  High Jump\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:20pm</div> : \n  200m\n  (Boys &amp; Girls - USATF Youth)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:40pm</div> : \n  400m\n  (Women - Masters)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:50pm</div> : \n  200m\n  (Men - Masters)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:00pm</div> : \n  200m\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:20pm</div> : \n  800m\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:40pm</div> : \n  110m Hurdles\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:50pm</div> : \n  200m\n  (Women - Final)\n</li>\n\n<li class="dateheader">\n7/1/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:30am</div> : \n  20km Race Walk\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:40pm</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:45pm</div> : \n  Javelin Throw\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00pm</div> : \n  Long Jump\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:02pm</div> : \n  400m Hurdles\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:12pm</div> : \n  400m Hurdles\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:23pm</div> : \n  1,500m\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:37pm</div> : \n  1,500m\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:50pm</div> : \n  200m\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:55pm</div> : \n  \n  ( - )\n</li>\n</ul>\n\n</div>');}return __p.join('');
 }(data, _)};
 
 /* Zepto v1.0rc1 - polyfill zepto event detect fx ajax form touch - zeptojs.com/license */
@@ -6790,19 +6790,19 @@ define('text!templates/header.html',[],function () { return '<!--<a href="#" id=
 
 define('text!templates/footer.html',[],function () { return '<div class="nav-wrapper">\n\t<div class="nav-button">\n\t\t<a href="/">News</a>\n\t</div>\n\t<div class="nav-button">\n\t\t<a href="/schedule">Schedule</a>\n\t</div>\n\t<div class="nav-button">\n\t\t<a href="/photos">Fan Pics</a>\n\t</div>\n</div>';});
 
-define('text!templates/schedule.html',[],function () { return 'The schedule goes here.';});
+define('text!templates/schedule.html',[],function () { return '<div id="schedulewrapper">\n<ul>\n<li class="dateheader">\n6/21/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">10:45:00</div> : \n  Hammer Throw\n  (Women - Trials)\n</li>\n\n<li>\n  <div class="time" style="display:inline">13:00:00</div> : \n  Hammer Throw\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00:00</div> : \n  Hammer Throw\n  (Men - Trials)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:00:00</div> : \n  Hammer Throw\n  (Men - Final)\n</li>\n\n<li class="dateheader">\n6/22/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">13:00:00</div> : \n  100m\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">1:50:00</div> : \n  Long Jump\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:20:00</div> : \n  Discus Throw\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:05:00</div> : \n  Shot Put\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:10:00</div> : \n  400m\n  (Men - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:35:00</div> : \n  400m\n  (Women - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:00:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:30:00</div> : \n  High Jump\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:00:00</div> : \n  800m\n  (Women - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:20:00</div> : \n  800m\n  (Men - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:30:00</div> : \n  Pole Vault\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:40:00</div> : \n  100m Hurdles\n  (Women - 1st Round)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:45:00</div> : \n  Long Jump\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:00:00</div> : \n  100m\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:30:00</div> : \n  400m\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:45:00</div> : \n  10,000m\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:20:00</div> : \n  10,000m\n  (Women - Final)\n</li>\n\n<li class="dateheader">\n6/23/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">9:30:00</div> : \n  110m Hurdles\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">10:20:00</div> : \n  Discus Throw\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">12:30:00</div> : \n  Pole Vault\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">12:30:00</div> : \n  Javelin Throw\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00:00</div> : \n  Shot Put\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00:00</div> : \n  Javelin Throw\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:10:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:15:00</div> : \n  100m Hurdles\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:20:00</div> : \n  Triple Jump\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:40:00</div> : \n  100m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:00:00</div> : \n  100m\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:20:00</div> : \n  High Jump\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:30:00</div> : \n  800m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:45:00</div> : \n  800m\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:00:00</div> : \n  400m\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:15:00</div> : \n  400m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:30:00</div> : \n  1,500m\n  (Men - Decathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:45:00</div> : \n  100m Hurdles\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:52:00</div> : \n  100m\n  (Women - Final)\n</li>\n\n<li class="dateheader">\n6/24/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">14:25:00</div> : \n  Pole Vault\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:30:00</div> : \n  100m\n  (Men - Semi-Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:55:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00:00</div> : \n  Long Jump\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:05:00</div> : \n  Discus Throw\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:30:00</div> : \n  Shot Put\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:20:00</div> : \n  400m\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:35:00</div> : \n  400m\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:48:00</div> : \n  100m\n  (Men - Final)\n</li>\n\n<li class="dateheader">\n6/25/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">15:30:00</div> : \n  Discus Throw\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:50:00</div> : \n  3,000m Steeplechase\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:20:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:25:00</div> : \n  3,000m Steeplechase\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:30:00</div> : \n  Pole Vault\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:45:00</div> : \n  Triple Jump\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:50:00</div> : \n  High Jump\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:00:00</div> : \n  Javelin Throw\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:05:00</div> : \n  5,000m\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:50:00</div> : \n  800m\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:00:00</div> : \n  5,000m\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:47:00</div> : \n  800m\n  (Men - Final)\n</li>\n\n<li class="dateheader">\n6/26/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline"></div> : \n  \n  ( - )\n</li>\n\n<li class="dateheader">\n6/27/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline"></div> : \n  \n  ( - )\n</li>\n\n<li class="dateheader">\n6/28/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">15:45:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:00:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:15:00</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:20:00</div> : \n  1,500m\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:30:00</div> : \n  Triple Jump\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">16:50:00</div> : \n  1,500m\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">17:00:00</div> : \n  High Jump\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">17:05:00</div> : \n  Pole Vault\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">17:30:00</div> : \n  400m Hurdles\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">17:40:00</div> : \n  Shot Put\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">18:00:00</div> : \n  400m Hurdles\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">18:05:00</div> : \n  Discus Throw\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">18:30:00</div> : \n  3,000m Steeplechase\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">18:45:00</div> : \n  200m\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">19:15:00</div> : \n  5,000m\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">19:38:00</div> : \n  5,000m\n  (Men - Final)\n</li>\n\n<li class="dateheader">\n6/29/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">10:30am</div> : \n  100m Hurdles\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">11:30am</div> : \n  High Jump\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">1:15pm</div> : \n  Shot Put\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">1:45pm</div> : \n  200m\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:15pm</div> : \n  200m\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:30pm</div> : \n  Javelin Throw\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:35pm</div> : \n  Mile\n  (Nike HS Girls - Exhibition Event)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:45pm</div> : \n  Mile\n  (Nike HS Boys - Exhibition Event)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:55pm</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00pm</div> : \n  200m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:20pm</div> : \n  400m Hurdles\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:30pm</div> : \n  Shot Put\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:30pm</div> : \n  Long Jump\n  (Women - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:35pm</div> : \n  400m Hurdles\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:45pm</div> : \n  1,500m\n  (Women - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:05pm</div> : \n  110m Hurdles\n  (Men - Qualifying)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:25pm</div> : \n  1,500m\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:45pm</div> : \n  3,000m Steeplechase\n  (Women - Final)\n</li>\n\n<li class="dateheader">\n6/30/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:30am</div> : \n  20km Race Walk\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00pm</div> : \n  Long Jump\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:45pm</div> : \n  100m\n  (Boys &amp; Girls - Special Olympics)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:10pm</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:15pm</div> : \n  Javelin Throw\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:20pm</div> : \n  110m Hurdles\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:40pm</div> : \n  Triple Jump\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:00pm</div> : \n  High Jump\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:20pm</div> : \n  200m\n  (Boys &amp; Girls - USATF Youth)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:40pm</div> : \n  400m\n  (Women - Masters)\n</li>\n\n<li>\n  <div class="time" style="display:inline">5:50pm</div> : \n  200m\n  (Men - Masters)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:00pm</div> : \n  200m\n  (Men - Semi-Finals)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:20pm</div> : \n  800m\n  (Women - Heptathlon)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:40pm</div> : \n  110m Hurdles\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">6:50pm</div> : \n  200m\n  (Women - Final)\n</li>\n\n<li class="dateheader">\n7/1/2012\n</li>\n\n<li>\n  <div class="time" style="display:inline">7:30am</div> : \n  20km Race Walk\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:40pm</div> : \n  \n  ( - )\n</li>\n\n<li>\n  <div class="time" style="display:inline">2:45pm</div> : \n  Javelin Throw\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">3:00pm</div> : \n  Long Jump\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:02pm</div> : \n  400m Hurdles\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:12pm</div> : \n  400m Hurdles\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:23pm</div> : \n  1,500m\n  (Women - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:37pm</div> : \n  1,500m\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:50pm</div> : \n  200m\n  (Men - Final)\n</li>\n\n<li>\n  <div class="time" style="display:inline">4:55pm</div> : \n  \n  ( - )\n</li>\n</ul>\n\n</div>';});
 
 define('text!templates/loading.html',[],function () { return '<div id="loading">\n<h1>Loading...</h1>\n</div>';});
 
 define('modules/story',[
   // Global application context.
   "app",
-
+  "zepto", // TODO: remove. see L22 for the hide() which is awful
   // Third-party libraries.
   "backbone"
 ],
 
-function(app, Backbone) {
+function(app, $, Backbone) {
   
   var Story = app.module();
 
@@ -6815,6 +6815,7 @@ function(app, Backbone) {
     url: 'http://dailyemerald.com/section/track-field/json?callback=?',
     parse: function(data) {
       console.log('Story.Collection: json data into parse:', data);
+      $("#loading").hide(); //TODO: this sucks.
       return data;
     }
     
@@ -6825,8 +6826,8 @@ function(app, Backbone) {
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-  Story.Views.List = Backbone.View.extend({
-    template: "app/templates/story-list",
+  Story.Views.Master = Backbone.View.extend({
+    template: "app/templates/story-master",
     tagName: "section",
     className: "page",
 
@@ -6844,6 +6845,8 @@ function(app, Backbone) {
 
       // Set the template contents.
       this.$el.html(tmpl({ stories: this.collection.toJSON() }));
+      //console.log(this.$el);
+      
       return this;
     }
     
@@ -7003,9 +7006,9 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
     routes: {
-      "": "list",
-      "list": "list",
-      "story/:id": "detail",
+      "": "storyMaster",
+      "list": "storyMaster",
+      "story/:id": "storyDetail",
       "schedule": "schedule",
       "photos": "instagram",
       "twitter": "twitter",
@@ -7014,35 +7017,63 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     
     initialize: function(options){
       this.main = $('#main'); // cache the selector. is this useful?
-      this.pageWidth = window.innerWidth;
+      //this.pageWidth = window.innerWidth;
       //this.pageDirection = 1;
     },
     
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
     showView: function(view) {
+      
       if (this.currentView) {
         this.currentView.close();
       }
       
+      
       this.newView = view.render().$el;
-      this.main.html( "..." );
-      this.main.html( this.newView ); 
-      this.currentView = view;
-      setTimeout(function() { window.scrollTo(0,1);}, 1);
+      
+      window.viewCache = null;
+      window.viewCache = this.newView;
+
+      $('#main').html('<div id="intermediate"></div>');
+    
+      $('#main').animate({translate3d: '0,0,0', opacity:0}, 1, 'linear', function() {
+
+        //$(".page").hide();
+
+        $('#main').html( window.viewCache ).animate({
+          translate3d: '0,0,0', 
+          opacity:1}, 
+          1, 
+          'linear', 
+          function() {
+            
+            window.setTimeout(function() { 
+                $('#main').get(0).style["-webkit-transform"] = "";
+                //$('#main').get(0).style["-webkit-transition"] = "";
+              }, 1); 
+          });
+        });
+      
+      
+      
+
+      
+
+      //setTimeout(function() { window.scrollTo(0,1);}, 1);
 
       //this.newView.appendTo($('#main'));
 
     },
     
-    list: function() {
+    storyMaster: function() {
 
       //this.pageDirection = -1;
-      var list = new Story.Views.List({ });   
+      var list = new Story.Views.Master({ });   
       this.showView(list);
     
     },
     
-    detail: function(id) {
+    storyDetail: function(id) {
       //this.pageDirection = 1;
 
       var detail = new Story.Views.Detail({ id: id });
@@ -7073,7 +7104,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
 
     $("header").html(headerTemplate);
     $("footer").html(footerTemplate);
-    $("body").append(loadingTemplate);
+    //$("body").append(loadingTemplate);
     $("#back-button").tap(function(evt) {
       if (app.pageHistory.length > 1) {
         //evt.preventDefault();
@@ -7081,12 +7112,14 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       }
     });
 
-    $("#info").hide();
+   // $("#info").hide();
 
     // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
     app.StoryCollectionInstance = new Story.Collection();
     app.StoryCollectionInstance.fetch();        
     app.router = new Router();
+    
+    setTimeout(function() { window.scrollTo(0,1) }, 1);
     
     Backbone.history.start({ pushState: true });
   });
@@ -7116,6 +7149,12 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   if (!('touchstart' in window)) {
     $(document).on('click', 'body', function(evt) {
       $(evt.target).trigger('tap');
+      evt.preventDefault();
+    });
+  } else {
+    $(document).on('click', 'body', function(evt) {
+      //$(evt.target).trigger('tap');
+      alert('got a click, even though we have touchstart')
       evt.preventDefault();
     });
   }
