@@ -58,21 +58,37 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       
       var pathname = window.location.pathname;
     
-      var newViewDOM = newView.render().$el;
-      
-      var self = this;
-       
-      this.main.animate({translate3d:'0,0,0', opacity: 0}, 1, 'linear', function() {
+      if (this.currentView) {
+        console.log('closing', this.currentView);
+        this.currentView.close();
+      }
+      this.currentView = null
     
+      var newViewDOM = newView.render().$el;
+      this.main.html(newViewDOM);
+      
+      if (pathname in app.ScrollPositions) {
+        window.scrollTo(0, 1 + app.ScrollPositions[pathname]); 
+      } else {
+        window.scrollTo(0, 1);
+        app.ScrollPositions[pathname] = 0;
+      }
+
+      $('time').timeago();
+
+      /*
+      var self = this;
+        
+      this.main.animate({opacity: 0}, 100, 'linear', function() {
+    
+        $(this).html(newViewDOM); //$(this) is $("#main") (right?)
+        
         if (self.currentView) {
           console.log('closing', self.currentView);
           self.currentView.close();
         }
         self.currentView = null;
         
-        //$(this) is $("#main") (right?)
-        $(this).html(newViewDOM);
-      
         if (pathname in app.ScrollPositions) {
           window.scrollTo(0, 1 + app.ScrollPositions[pathname]); 
         } else {
@@ -83,17 +99,17 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
         $('time').timeago();
         //app.allowClick = true;
 
-        $(this).animate({translate3d:'0,0,0', opacity: 1}, 1, 'linear', function() {
+        $(this).animate({opacity: 1}, 100, 'linear', function() {
           console.log('done');
           
           self.currentView = newView;
           
         });
-          
+        
         
     
       });
-      
+      */  
      
 
       
@@ -169,8 +185,8 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     $("#backbutton").on('singleTap', function(evt) {
       console.log('backbutton tap');
       if (app.pageHistory.length > 0) {
-        //evt.preventDefault();
-        //window.history.back();
+        evt.preventDefault();
+        window.history.back();
 
         //Backbone.history.navigate(lastPage, true);
         //app.pageHistory.pop();
