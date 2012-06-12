@@ -1,25 +1,12 @@
 <div id="story-list-wrapper">
-<ul id="story-list-ul">
-<% _.each(stories, function(story) { %> 
-
-	<% 
-	if (typeof story.thumbnail === "string") { 
-	  var backgroundimage =  story.thumbnail;
-	} else {
-	  var backgroundimage = "http://dev.dailyemerald.com/emerald114.png";
-	} 
-	%>
-	
-	<li style="background-image: url(<%= backgroundimage %>)">
-		
-		
-		<a href="/story/<%= story.id %>">
-			
-			<div class="story-list-item-title"><%= story.title %></div>
-		</a>
-		
-
-	</li> 
-<% }); %>
-</ul>
+	<ul id="story-list-ul">
+	<% _.each(stories, function(story) { %> 	
+		<li style="background-image: url(<%= story.smallThumbnail %>)">
+			<a href="/story/<%= story.id %>">
+				<div class="story-list-item-title"><%= story.title %></div>
+				<time class="timeago" datetime="<%= story.timestamp %>"></time>
+			</a>
+		</li> 
+	<% }); %>
+	</ul>
 </div>

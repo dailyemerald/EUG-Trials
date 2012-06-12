@@ -14,22 +14,25 @@ require([
   // Modules
   "modules/story",
   "modules/instagram",
-  "modules/schedule"
+  "modules/schedule",
+  "modules/about"
 ],
 
-function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule) {
+function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule, About) {
 
   // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
   Backbone.View.prototype.close = function () {
-      console.log('close()-ing view:', this);
+      //console.log('close()-ing view:', this);
       if (this.beforeClose) {
           this.beforeClose();
       }
       this.remove();
       this.unbind();
+      //console.log('post remove/unbind:', this);
   };
 
   app.pageHistory = [];
+  app.allowClick = true;
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
@@ -40,6 +43,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       "schedule": "schedule",
       "photos": "instagram",
       "twitter": "twitter",
+      "about" :"about",
       "*other": "gohome"
     },
     
@@ -50,23 +54,58 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     },
     
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
-    showView: function(view) {
+    showView: function(newView) {
       
-      var path = window.location.pathname;
+      var pathname = window.location.pathname;
+    
+      var newViewDOM = newView.render().$el;
       
-      if (this.currentView) {
-        this.currentView.close();
-      }
+      var self = this;
+       
+      this.main.animate({translate3d:'0,0,0', opacity: 0}, 1, 'linear', function() {
+    
+        if (self.currentView) {
+          console.log('closing', self.currentView);
+          self.currentView.close();
+        }
+        self.currentView = null;
+        
+        //$(this) is $("#main") (right?)
+        $(this).html(newViewDOM);
       
-      this.newView = view.render().$el;
-      
-      window.viewCache = null;
-      window.viewCache = this.newView;
+        if (pathname in app.ScrollPositions) {
+          window.scrollTo(0, 1 + app.ScrollPositions[pathname]); 
+        } else {
+          window.scrollTo(0, 1);
+          app.ScrollPositions[pathname] = 0;
+        }
+        
+        $('time').timeago();
+        //app.allowClick = true;
+
+        $(this).animate({translate3d:'0,0,0', opacity: 1}, 1, 'linear', function() {
+          console.log('done');
           
-      $('#main').html( this.newView ).hide();
-      setTimeout(function() {
-        $("#main").show();
-      },1);
+          self.currentView = newView;
+          
+        });
+          
+        
+    
+      });
+      
+     
+
+      
+      
+      /*while ($("#main").children().length > 1) {
+        $("#main").children().eq(0).remove();
+        console.log("blam!");
+      }
+      */
+      
+        
+      //},1);
       /*$('img').css({opacity: 0});
       $('#main').css({opacity: 0}).show();
       
@@ -77,12 +116,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       });
       */
 
-      if (path in app.ScrollPositions) {
-        window.scrollTo(0, 1+app.ScrollPositions[path]); 
-      } else {
-        window.scrollTo(0,1);
-        app.ScrollPositions[path] = 0;
-      }
+      
     
     },
     
@@ -114,6 +148,11 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     gohome: function() {
       console.log('well, this is weird. to /');
       Backbone.history.navigate('/', true);
+    },
+    
+    about: function() {
+      var view_ = new About.Views.Master();
+      this.showView(view_);
     }
     
   });
@@ -129,9 +168,16 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     $("#backbutton").css({opacity:0});
     $("#backbutton").on('singleTap', function(evt) {
       console.log('backbutton tap');
-      if (app.pageHistory.length > 1) {
+      if (app.pageHistory.length > 0) {
         //evt.preventDefault();
-        window.history.back();
+        //window.history.back();
+
+        //Backbone.history.navigate(lastPage, true);
+        //app.pageHistory.pop();
+        //window.history.back();
+        if (app.pageHistory.length === 0) {
+          //$("#backbutton").css({opacity:0});
+        }
       } 
     });
 
@@ -144,7 +190,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     app.StoryCollectionInstance.fetch();        
     app.router = new Router();
     
-    setTimeout(function() { window.scrollTo(0,1); }, 1);
+    //setTimeout(function() { window.scrollTo(0,1); }, 1);
     
     Backbone.history.start({ pushState: true });
   });
@@ -153,7 +199,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   // method, to be processed by the router.  If the link has a data-bypass
   // attribute, bypass the delegation completely.
   //$(document).on(mobileTapEvent, "a:not([data-bypass])", function(evt) {
-  $(document).on('singleTap', 'a:not([data-bypass])', function(evt) {
+  $(document).on('tap','a:not([data-bypass])', function(evt) {
     //console.log('inside', mobileTapEvent, "handler");
  
     var href = $(this).attr("href");
@@ -162,17 +208,27 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     if (href && href.slice(0, protocol.length) !== protocol && href.indexOf("javascript:") !== 0) {
       //$("#loading").show();
       evt.preventDefault();      
-      app.pageHistory.push(href);
       
-      $('#backbutton').animate({opacity:1}, 400, 'linear');
+      if (app.allowClick === true) {
+        
+        app.allowClick = false;
+        setTimeout(function() {
+          app.allowClick = true; // TODO: seems way hacky.
+        }, 450);
+        
+        app.pageHistory.push(href);
       
-      app.ScrollPositions[window.location.pathname] = document.body.scrollTop;
-      console.log(document.body.scrollTop);
+        if ($('#backbutton').css('opacity') < 1) {
+          $('#backbutton').animate({opacity:1}, 500, 'linear');
+        }
       
-      console.log(app.ScrollPositions);
+        app.ScrollPositions[window.location.pathname] = document.body.scrollTop;
       
-      console.log('pageHistory:',app.pageHistory);
-      Backbone.history.navigate(href, true);
+        console.log('pageHistory:',app.pageHistory);
+        Backbone.history.navigate(href, true);
+      } else {
+        console.log('allowClick false, but tap here...', href);
+      }
     } 
       
   });
@@ -180,9 +236,15 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   // if we don't have a touchstart, make a click trigger a tap. because we're not on a mobile device that supports it. right?
   if (!('touchstart' in window)) {
     $(document).on('click', 'body', function(evt) {
-      $(evt.target).trigger('singleTap');
+      $(evt.target).trigger('tap');
       evt.preventDefault();
     });
-  } 
+  } else {
+    $(document).on('click', 'body', function(evt) {
+      evt.preventDefault();
+      alert('got a click, even though weve got touchstart...');
+      return false;
+    });
+  }
 
 });

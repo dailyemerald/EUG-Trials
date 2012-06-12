@@ -7,7 +7,9 @@
 
 	<div class="story-detail-metabox">
 		<p style="story-detail-byline">By <%= story.author %></p>
-		<p><%= story.date %></p>
+		<time class="timeago" datetime="<%= story.timestamp %>"></time>
+		
+		<iframe src="//www.facebook.com/plugins/like.php?href=<%= story.permalink %>%2F&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font=lucida+grande&amp;height=35&amp;appId=201717029854731" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
 	</div>
 
 	<p><%= story.content %></p>

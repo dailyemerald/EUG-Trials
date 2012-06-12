@@ -18,8 +18,24 @@ function(app, $, Backbone) {
     model: Story.Model,
     url: 'http://dailyemerald.com/section/track-field/json?callback=?',
     parse: function(data) {
+
+      data.forEach(function(story){
+        //rewrite a smallThumbnail from the bigger one...
+        if (typeof story.thumbnail === 'string') {
+          var thumbnailRoot = story.thumbnail.split("-");
+          thumbnailRoot.pop();
+          story.smallThumbnail = thumbnailRoot.join("-") + "-150x150." + story.thumbnail.split('.').pop();
+        } else {
+          story.smallThumbnail = "http://dev.dailyemerald.com/emerald114.png"; //TODO: Where should this really go?
+        }
+        
+        //rewrite the wordpress timestamp for 'timeago' relative time stuff
+        story.timestamp = story.date.split(" ").join("T") + "Z";
+        
+      }); 
+
       console.log('Story.Collection: json data into parse:', data);
-      $("#loading").hide(); //TODO: this sucks.
+
       return data;
     }
     
