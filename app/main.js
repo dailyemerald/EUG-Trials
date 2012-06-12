@@ -182,7 +182,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     $("footer").html(footerTemplate);
     //$("body").append(loadingTemplate);
     $("#backbutton").css({opacity:0});
-    $("#backbutton").on('singleTap', function(evt) {
+    $("#backbutton").on('tap', function(evt) {
       console.log('backbutton tap');
       if (app.pageHistory.length > 0) {
         evt.preventDefault();
