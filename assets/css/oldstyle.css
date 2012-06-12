@@ -1,0 +1,216 @@
+/* http://maxogden.com/fast-webview-applications */
+a {  
+  /* prevent callout when holding tap on links (the native dialog that comes up) */
+  -webkit-touch-callout: none; 
+  /* prevent webkit from resizing text to fit */
+  -webkit-text-size-adjust: none; 
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0.5);
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  -webkit-user-select: none; 
+}
+input[type="checkbox"] { -webkit-appearance: none; }
+input::-webkit-input-placeholder { opacity: .8; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  /*overflow: hidden;*/
+}
+
+/* layout */
+
+.page a {
+  color: #666;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  /*background: #87a771;*/
+  background-image: -webkit-linear-gradient(bottom, #688057 24%, #87A771 73%);
+  color: #FFF;
+  z-index: 2;
+}
+
+#flag {
+  text-shadow: #666 1px -1px 1px;
+  padding-top:6px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 300px; 
+  text-align: center; 
+  display: block; 
+  font-size: 25px
+}
+
+
+#wrapper {
+  position: relative;
+  height: 100%;
+  height: 100%;
+  /*top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 40px;*/
+  /*overflow: none;*/
+}
+#main {
+  /*position: absolute;*/
+  width: 100%;  
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 50px 0;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  /*background: #CCC;*/
+  background-image: -webkit-linear-gradient(bottom, #222222 0%, #666666 100%);
+  z-index: 2;
+}
+
+
+#back-button {
+  background: #333;
+  color: #FFF;
+  border-radius: 10px;
+  padding: 7px;
+  margin: 2px;
+  text-align: center;
+  width: 60px;
+  display:block;
+}
+
+.nav-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+.nav-button {
+  display: inline-block;
+  height: 100%;
+  width: 31%;
+  text-align: center;
+  padding-top: 15px;
+  border: 1px solid #333;
+  margin: 0px;
+  text-shadow: #888 1px 0px 0px;
+  cursor: pointer;
+}
+.nav-wrapper:last-child {
+  border-right: 0;
+}
+
+.nav-button a, .nav-button a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* font styles */
+
+#main p {
+  line-height: 20px;
+}
+
+
+#main ul {
+  width: 96%;
+  padding: 0 2%;
+  margin: 0;
+}
+
+#main li {
+  line-height: 28px;
+  list-style: none;
+
+  height: 80px;
+
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0;
+
+}
+#main li a {
+  text-decoration: none;
+}
+
+
+#main header h1 {
+  display: inline-block;
+  color: #333;
+}
+
+.story-list-liner {
+  position: relative;
+}
+.story-list-item-img {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  height: 80px !important;
+  width: auto;
+}
+.story-list-item-title {
+  display:block;
+  margin-left: 130px;
+}
+
+/* story detail style */
+
+.story-detail {
+  width: 98%;
+  padding: 0 1%;
+}
+
+.story-detail-title {
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -1px;
+}
+.story-detail-img {
+  width: 100%;
+  height: auto;
+}
+.story-detail-metabox {
+  padding: 5px;
+  background: #EEE;
+  border-radius: 5px;
+}
+.story-detail .wp-caption {
+  display: none;
+}
+.story-detail-byline {
+  font-size: 11px;
+}
+.story-detail-break {
+  width: 100%;
+  display: block;
+  height: 5px;
+  border-bottom: 2px solid #333;
+  margin-bottom: 5px;
+}
+
+
+
+#loading {
+  display: none;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 20%;
+  text-align: center;
+  color: #FFF;
+  background: #333;
+  z-index: 100;
+}
+
