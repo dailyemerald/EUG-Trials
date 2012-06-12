@@ -1558,11 +1558,6 @@ window.Zepto = Zepto
   document.createElement("time");
 })(Zepto);
 
-
-if ( typeof define === "function" && define.amd ) {
-  define( "timeago", [], function () { return Zepto; } );
-}
-
 window.Zepto = Zepto;
 '$' in window || (window.$ = Zepto);
 
