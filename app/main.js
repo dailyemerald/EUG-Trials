@@ -62,7 +62,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
         console.log('closing', this.currentView);
         this.currentView.close();
       }
-      this.currentView = null
+      this.currentView = null;
     
       var newViewDOM = newView.render().$el;
       this.main.html(newViewDOM);
