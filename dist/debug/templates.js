@@ -9,7 +9,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/header.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<!--<a href="#" id="back-button">BACK</a>-->\n\n<div id="flag">EUG Trials</div>\n');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<!--<a href="#" id="back-button">BACK</a>-->\n\n<a id="backbutton"><span>Back</span></a>\n\n<div id="flag">EUG Trials</div>\n');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/footer.html'] = function(data) { return function (obj,_) {

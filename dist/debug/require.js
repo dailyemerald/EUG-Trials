@@ -324,7 +324,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/header.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<!--<a href="#" id="back-button">BACK</a>-->\n\n<div id="flag">EUG Trials</div>\n');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<!--<a href="#" id="back-button">BACK</a>-->\n\n<a id="backbutton"><span>Back</span></a>\n\n<div id="flag">EUG Trials</div>\n');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/footer.html'] = function(data) { return function (obj,_) {
@@ -6786,7 +6786,7 @@ define('text',['module'], function (module) {
 
     return text;
 });
-define('text!templates/header.html',[],function () { return '<!--<a href="#" id="back-button">BACK</a>-->\n\n<div id="flag">EUG Trials</div>\n';});
+define('text!templates/header.html',[],function () { return '<!--<a href="#" id="back-button">BACK</a>-->\n\n<a id="backbutton"><span>Back</span></a>\n\n<div id="flag">EUG Trials</div>\n';});
 
 define('text!templates/footer.html',[],function () { return '<div class="nav-wrapper">\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/">News</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/schedule">Schedule</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/photos">Fan Photos</a></span>\n\t</div>\n</div>';});
 
@@ -7024,50 +7024,38 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
     showView: function(view) {
       
+      var path = window.location.pathname;
+      
       if (this.currentView) {
         this.currentView.close();
       }
-      
       
       this.newView = view.render().$el;
       
       window.viewCache = null;
       window.viewCache = this.newView;
+          
+      $('#main').html( this.newView ).hide();
+      setTimeout(function() {
+        $("#main").show();
+      },1);
+      /*$('img').css({opacity: 0});
+      $('#main').css({opacity: 0}).show();
+      
+      $('#main').animate(  {translate3d: '0,0,0', opacity: 0}, 0,  'linear', function() {
+        $('#main:not(img)').animate({translate3d: '0,0,0', opacity: 1}, 50, 'linear', function() {
+          $('img').animate({translate3d: '0,0,0', opacity: 1}, 1000, 'linear')
+        });  
+      });
+      */
 
-      //$('#main').html('<div id="intermediate"></div>');
+      if (path in app.ScrollPositions) {
+        window.scrollTo(0, 1+app.ScrollPositions[path]); 
+      } else {
+        window.scrollTo(0,1);
+        app.ScrollPositions[path] = 0;
+      }
     
-     $('#main').html( window.viewCache );
-    
-    /*
-      $('#main').animate({translate3d: '0,0,0', opacity:0}, 1, 'linear', function() {
-
-        //$(".page").hide();
-
-        $('#main').html( window.viewCache ).animate({
-          translate3d: '0,0,0', 
-          opacity:1}, 
-          1, 
-          'linear', 
-          function() {
-            
-            window.setTimeout(function() { 
-                $('#main').get(0).style["-webkit-transform"] = "";
-                //$('#main').get(0).style["-webkit-transition"] = "";
-              }, 1); 
-          });
-        });
-        
-        */
-      
-      
-      
-
-      
-
-      //setTimeout(function() { window.scrollTo(0,1);}, 1);
-
-      //this.newView.appendTo($('#main'));
-
     },
     
     storyMaster: function() {
@@ -7110,14 +7098,18 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     $("header").html(headerTemplate);
     $("footer").html(footerTemplate);
     //$("body").append(loadingTemplate);
-    $("#back-button").tap(function(evt) {
+    $("#backbutton").css({opacity:0});
+    $("#backbutton").on('singleTap', function(evt) {
+      console.log('backbutton tap');
       if (app.pageHistory.length > 1) {
         //evt.preventDefault();
         window.history.back();
-      }
+      } 
     });
 
    // $("#info").hide();
+
+    app.ScrollPositions = {};
 
     // spin up the collection instance for stories. TODO: this feels like the wrong spot to have this. why?
     app.StoryCollectionInstance = new Story.Collection();
@@ -7141,8 +7133,15 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
 
     if (href && href.slice(0, protocol.length) !== protocol && href.indexOf("javascript:") !== 0) {
       //$("#loading").show();
-      evt.preventDefault();
+      evt.preventDefault();      
       app.pageHistory.push(href);
+      
+      $('#backbutton').animate({opacity:1}, 400, 'linear');
+      
+      app.ScrollPositions[window.location.pathname] = document.body.scrollTop;
+      console.log(document.body.scrollTop);
+      
+      console.log(app.ScrollPositions);
       
       console.log('pageHistory:',app.pageHistory);
       Backbone.history.navigate(href, true);
