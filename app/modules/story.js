@@ -66,6 +66,7 @@ function(app, $, Backbone) {
       // Set the template contents.
       this.$el.html(tmpl({ stories: this.collection.toJSON() }));
       //console.log(this.$el);
+      $('time').timeago();
       
       return this;
     }
@@ -109,12 +110,14 @@ function(app, $, Backbone) {
       this.model = this.collection.get(this.id);
       
       if (this.model) {
-   
+
         //console.log('in story.views.detail', this.model);
         var tmpl = app.fetchTemplate(this.template);
 
         // Set the template contents.
         this.$el.html(tmpl({story: this.model.toJSON() }));
+        $('time').timeago();
+        
         return this;
       } else {
         //console.log('dont have a model yet in s v d');

@@ -73,8 +73,17 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
         window.scrollTo(0, 1);
         app.ScrollPositions[pathname] = 0;
       }
-
-      $('time').timeago();
+      //this.main.find('img').hide();
+      //setTimeout(function() {
+        console.log('calling timeago');
+        $('time').timeago();  
+      //}, 5);
+      
+      /*
+      this.main.find('img').forEach(function($el) {
+        $el.attr('src',$el.attr('data-img'));
+      });
+      */
 
       /*
       var self = this;

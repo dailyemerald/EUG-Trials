@@ -17,16 +17,19 @@ html, body {
   /*height: 100%;
   width: 100%;
   overflow: hidden;*/
+  background: #333;
 }
 
 /* layout */
 #wrapper, #main, section {
-  /*-webkit-backface-visibility: hidden;*/
+  -webkit-backface-visibility: hidden;
+  /*-webkit-perspective: 1000;*/
+  /*background-image: -webkit-linear-gradient(bottom, #DDD 24%, #FFF 73%);*/
 }
 
 .page a {
-  color: #666;
-  background: #FFF; 
+  color: #333;
+  font-weight: bold;
 }
 
 header {
@@ -34,18 +37,21 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 44px;
   /*background: #87a771;*/
   background-image: -webkit-linear-gradient(bottom, #688057 24%, #87A771 73%);
+  
   color: #FFF;
   z-index: 2;
+  /*border-top-left-radius: 4px;
+  border-top-right-radius: 4px;*/
   display:table;
-  box-shadow: 0px 1px 10px 1px #333;
+  box-shadow: inset 0px 0px 0px 1px #333;
 }
 
 #flag {
   text-shadow: #333 1px 1px 1px;
-  padding-top:6px; 
+  padding-top:4px; 
   margin-left: auto; 
   margin-right: auto; 
   width: 300px; 
@@ -70,7 +76,7 @@ header {
   width: 100%;  
   overflow-y: scroll;
   /*-webkit-overflow-scrolling: touch;*/
-  padding: 50px 0;
+  padding: 45px 0;
   background: #FFF;
 }
 
@@ -79,10 +85,11 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 50px;
+  height: 45px;
   width: 100%;
   background: #333;
   z-index: 2;
+  /*border-radius: 2px;*/
   /*box-shadow: 0px -1px 10px 1px #333;*/
   
 }
@@ -92,7 +99,7 @@ footer {
   background: #333;
   color: #FFF;
   border-radius: 10px;
-  padding: 7px;
+  padding: 3px;
   margin: 2px;
   text-align: center;
   width: 60px;
@@ -108,7 +115,7 @@ footer {
 .nav-button {
   float:left;
   height: 100%;
-  width: 33.33%;
+  width: 33.33333%;
   text-align: center;
   padding-right: 1px;
   padding-top: 1px;
@@ -126,9 +133,10 @@ footer {
   height: 100%;
   margin: 0;
   padding: 0px;
-  border-radius: 3px;
+  /*border-radius: 3px;*/
   background-image: -webkit-linear-gradient(bottom, #333 0%, #666 100%);
   display: inline-block;
+  box-shadow: inset 0 0 2px 0px #999;
 }
 
 
@@ -137,7 +145,7 @@ footer {
   text-decoration: none;
 
   display: block;
-  padding: 14px 1%;
+  padding: 11px 1%;
   text-shadow: #333 1px 1px 1px;
   
 }
@@ -149,8 +157,8 @@ footer {
 
 #aboutbutton {
   position: fixed;
-  right: 10px;
-  top: 8px;
+  right: 5px;
+  top: 5px;
   color: #FFF;
   border-radius: 5px;
   display: inline-block;
@@ -168,6 +176,7 @@ footer {
 
 #main p {
   line-height: 20px;
+  text-align: justify;
 }
 
 
@@ -200,6 +209,7 @@ footer {
   color: #333;
 }
 
+
 .story-list-liner {
   /*position: relative;*/
 }
@@ -208,14 +218,19 @@ footer {
 }
 
 #story-list-wrapper {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
 }
 
 #story-list-ul time {
   display: block;
   padding-left: 90px;
   font-size: 14px;
-  color: #666;
+  color: #888;
+  margin-top: -7px;
+}
+
+#story-list-ul li a:visited {
+
 }
 
 .story-list-item-title {
@@ -231,14 +246,15 @@ footer {
 /* story detail style */
 
 .story-detail {
-  width: 98%;
-  padding: 0 1%;
+  width: 96%;
+  padding: 0 2%;
 }
 
 .story-detail-title {
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 25px;
   letter-spacing: -1px;
+  color: #333;
 }
 .story-detail-img {
   width: 100%;
@@ -246,10 +262,15 @@ footer {
   max-width: 900px !important;
 }
 .story-detail-metabox {
-  padding: 5px;
+  padding: 10px;
   background: #EEE;
   border-radius: 5px;
-    max-width: 900px !important;
+    max-width: 700px !important;
+}
+.story-detail-metabox > *{
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
 }
 .story-detail img {
   width: 100%;
@@ -260,6 +281,7 @@ footer {
 }
 .story-detail .wp-caption {
   width: 100%;
+  display: none;
     max-width: 900px !important;
 }
 .story-detail-byline {
@@ -358,9 +380,9 @@ footer {
     display: inline-block;
     height: 28px;
     line-height: 28px;
-    margin-left: 25px;
+    margin-left: 19px;
     margin-right: 2px;
-    margin-top: 10px;
+    margin-top: 7px;
     padding: 0 7px 0 3px;
     position: fixed;
     text-decoration: none;
