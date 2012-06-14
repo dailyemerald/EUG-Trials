@@ -1,0 +1,111 @@
+<html>
+<head>
+</head>
+
+<style type="text/css">
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  display: block;
+  list-type: none;
+  padding:5px;
+
+  text-align: center;
+  border-bottom: 1px solid #777;
+}
+.time {
+  font-weight: bold;
+}
+.dateheader {
+  color: #FFF;
+  background: #333;
+  font-size: 20px;
+}
+
+
+.event-wrapper {
+	display:table;
+	width: 100%;
+}
+.event-wrapper > * {
+	display:table-cell;
+	width: 33%;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.alternate:not(.dateheader) {
+	background: #EEE;
+}
+
+
+</style>
+
+<body>
+<div id="main">
+
+<ul></ul>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://future.dailyemerald.com/js/tabletop.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0.beta6/handlebars.min.js"></script>
+
+<script id="tplDateHeader" type="text/template">
+<li class="dateheader">
+  {{date2}}
+</li>
+</script>
+
+<script id="tpl" type="text/template">
+<li class="event-wrapper">
+  <div class="time">{{time2}}</div> 
+  <div class="event">{{event}}</div>
+  <div>
+  <div class="gender">{{gender}}</div>
+  <div class="round">{{round}}</div>
+  </div>
+</li>
+</script>
+
+<script>
+$(document).ready(function() {	
+  Tabletop.init({ 
+    key: '0At5zQXh2AKd6dHhzNmZla0NZU0R4U2dkT0E1S3Q1TVE',
+    callback: build
+  });
+  window.tpl = Handlebars.compile($("#tpl").html());
+  window.tplDateHeader = Handlebars.compile($("#tplDateHeader").html());
+  window.currentDate = '';
+
+
+
+});
+
+function build(data) {
+	
+  console.log(data.Sheet1.elements);	
+	
+  data.Sheet1.elements.forEach(function(event) {
+    
+    if (event.date !== window.currentDate) {
+      $('ul').append(tplDateHeader(event));
+      window.currentDate = event.date;
+    }
+
+    $('ul').append(tpl(event));
+  });
+
+  
+  $('ul li:nth-child(odd)').addClass('alternate');
+
+}
+</script>
+</body>
+</html>
