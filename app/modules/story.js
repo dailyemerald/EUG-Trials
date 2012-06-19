@@ -16,7 +16,7 @@ function(app, $, Backbone) {
   
   Story.Collection = Backbone.Collection.extend({
     model: Story.Model,
-    url: 'http://dailyemerald.com/section/track-field/json?callback=?',
+    url: 'http://dailyemerald.com/section/2012-olympic-trials/json?callback=?',
     parse: function(data) {
 
       data.forEach(function(story){
