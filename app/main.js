@@ -35,7 +35,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   app.allowClick = true;
 
   window.log = function(data) { // TODO: less hacky than the window bind?
-    var urlBase = "http://dev.dailyemerald.com:4321/log/"
+    var urlBase = "http://dev.dailyemerald.com:4321/log/";
     $.ajaxJSONP({
       url: urlBase + JSON.stringify(data)
     });
