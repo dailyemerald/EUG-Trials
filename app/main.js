@@ -39,7 +39,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     $.ajaxJSONP({
       url: urlBase + JSON.stringify(data)
     });
-  }
+  };
 
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({

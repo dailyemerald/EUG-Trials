@@ -7263,6 +7263,13 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   app.pageHistory = [];
   app.allowClick = true;
 
+  window.log = function(data) { // TODO: less hacky than the window bind?
+    var urlBase = "http://dev.dailyemerald.com:4321/log/";
+    $.ajaxJSONP({
+      url: urlBase + JSON.stringify(data)
+    });
+  };
+
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
     routes: {
@@ -7286,6 +7293,12 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     showView: function(newView) {
       
       var pathname = window.location.pathname;
+    
+      log({
+        "action": "showView", 
+        "timestamp": new Date(), 
+        "pathname": pathname
+      });//TODO: hack
     
       if (this.currentView) {
         console.log('closing', this.currentView);
@@ -7422,6 +7435,12 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     $("#backbutton").css({opacity:0});
     $("#backbutton").on('tap', function(evt) {
       console.log('backbutton tap');
+      
+      log({
+        "action": "backbutton", 
+        "timestamp": new Date()
+      });//TODO: hack
+      
       if (app.pageHistory.length > 0) {
         evt.preventDefault();
         window.history.back();
@@ -7479,6 +7498,13 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
         app.ScrollPositions[window.location.pathname] = document.body.scrollTop;
       
         console.log('pageHistory:',app.pageHistory);
+        
+        log({
+          "action": "tap", 
+          "timestamp": new Date(), 
+          "href": href
+        });//TODO: hack
+        
         Backbone.history.navigate(href, true);
       } else {
         console.log('allowClick false, but tap here...', href);
