@@ -331,6 +331,10 @@ this['JST']['app/templates/header.html'] = function(data) { return function (obj
 var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<!--<a href="#" id="back-button">BACK</a>-->\n\n<a id="backbutton"><span>Back</span></a>\n\n<div id="flag">EUG Trials</div>\n\n<a href="/about" id="aboutbutton"><span>?</span></a>');}return __p.join('');
 }(data, _)};
 
+this['JST']['app/templates/fourohfour.html'] = function(data) { return function (obj,_) {
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div style="text-align: center">\n<h2>Oops, I\'m sorry! That page doesn\'t exist.</h2>\n\n<a href="/">Let\'s go home?</a>\n</div>');}return __p.join('');
+}(data, _)};
+
 this['JST']['app/templates/footer.html'] = function(data) { return function (obj,_) {
 var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="nav-wrapper">\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/list">News</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/schedule">Schedule</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/photos">Fan Photos</a></span>\n\t</div>\n</div>');}return __p.join('');
 }(data, _)};
@@ -7023,6 +7027,11 @@ function(app, $, Backbone) {
     url: 'http://dailyemerald.com/section/2012-olympic-trials/json?callback=?',
     parse: function(data) {
 
+      window.log({
+        "function": "Story.Collection.parse",
+        "timestamp": new Date()
+      });
+
       data.forEach(function(story){
         //rewrite a smallThumbnail from the bigger one...
         if (typeof story.thumbnail === 'string') {
@@ -7038,7 +7047,7 @@ function(app, $, Backbone) {
         
       }); 
 
-      console.log('Story.Collection: json data into parse:', data);
+      //console.log('Story.Collection: json data into parse:', data);
 
       return data;
     }
@@ -7057,20 +7066,20 @@ function(app, $, Backbone) {
 
     initialize: function() {
       this.collection = app.StoryCollectionInstance;
-      console.log("Story.View.List init, this.collection:", this.collection);
+      //console.log("Story.View.List init, this.collection:", this.collection);
     
       this.collection.bind("reset", this.render, this);
     },
 
     render: function(done) {
-      console.log('s v l: render: collection:', this.collection);
+      //console.log('s v l: render: collection:', this.collection);
       // Fetch the template.
       var tmpl = app.fetchTemplate(this.template);
 
       // Set the template contents.
       this.$el.html(tmpl({ stories: this.collection.toJSON() }));
       //console.log(this.$el);
-      $('time').timeago();
+      this.$el.find('time').timeago();
       
       return this;
     }
@@ -7227,6 +7236,36 @@ function(app, Backbone) {
   return About;
 });
 
+define('modules/fourohfour',[
+  // Global application context.
+  "app",
+
+  // Third-party libraries.
+  "backbone"
+],
+
+function(app, Backbone) {
+  var Fourohfour = app.module();
+
+  //About.Model = Backbone.Model.extend({});
+  //About.Collection = Backbone.Model.extend({});
+
+  Fourohfour.View = Backbone.View.extend({
+    
+    template: "app/templates/fourohfour",
+    tagName: "section",
+    className: "page",
+    
+    render: function() {
+      var tmpl = app.fetchTemplate(this.template);
+      this.$el.html( tmpl() );
+      return this;
+    }
+  });
+
+  return Fourohfour;
+});
+
 require([
   "app",
 
@@ -7244,10 +7283,11 @@ require([
   "modules/story",
   "modules/instagram",
   "modules/schedule",
-  "modules/about"
+  "modules/about",
+  "modules/fourohfour"
 ],
 
-function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule, About) {
+function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule, About, Fourohfour) {
 
   // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
   Backbone.View.prototype.close = function () {
@@ -7266,7 +7306,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   window.log = function(data) { // TODO: less hacky than the window bind?
     var urlBase = "http://dev.dailyemerald.com:4321/log/";
     $.ajaxJSONP({
-      url: urlBase + JSON.stringify(data)
+      url: urlBase + encodeURIComponent(JSON.stringify(data))
     });
   };
 
@@ -7280,7 +7320,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       "photos": "instagram",
       "twitter": "twitter",
       "about" :"about",
-      "*other": "gohome"
+      "*other": "fourohfour"
     },
     
     initialize: function(options){
@@ -7301,7 +7341,7 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       });//TODO: hack
     
       if (this.currentView) {
-        console.log('closing', this.currentView);
+        //console.log('closing', this.currentView);
         this.currentView.close();
       }
       this.currentView = null;
@@ -7317,8 +7357,15 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       }
       //this.main.find('img').hide();
       //setTimeout(function() {
-        console.log('calling timeago');
+        //console.log('calling timeago');
         $('time').timeago();  
+        
+      setTimeout(function() {
+        if (app.allowClick === false) {
+          log({"info": "app.allowClick still false, showView changing to true"});
+          app.allowClick = true;
+        }
+      }, 500);  
       //}, 5);
       
       /*
@@ -7412,9 +7459,11 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       this.showView(view_);
     },
    
-    gohome: function() {
-      console.log('well, this is weird. to /');
-      Backbone.history.navigate('/', true);
+    fourohfour: function() {
+      //console.log('well, this is weird. to /');
+      var view_ = new Fourohfour.View();
+      this.showView(view_);
+      //Backbone.history.navigate('/', true);
     },
     
     about: function() {
@@ -7429,27 +7478,34 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
   // point should be definitions.
   $(function() {
 
+    log({"info": "DOM ready", "timestamp": new Date()});
+
+    app.pageHistory.push(window.location.pathname); //put our landing page in there!
+
     $("header").html(headerTemplate);
     $("footer").html(footerTemplate);
-    //$("body").append(loadingTemplate);
+    
     $("#backbutton").css({opacity:0});
     $("#backbutton").on('tap', function(evt) {
-      console.log('backbutton tap');
+      //console.log('backbutton tap');
       
       log({
         "action": "backbutton", 
         "timestamp": new Date()
       });//TODO: hack
       
-      if (app.pageHistory.length > 0) {
+      if (app.pageHistory.length >= 2) {
         evt.preventDefault();
-        window.history.back();
+        //window.history.back();
+        var currentPage = app.pageHistory.pop();
+        var pageToGoTo = app.pageHistory.pop();
+        requestPageChange( pageToGoTo );
 
         //Backbone.history.navigate(lastPage, true);
         //app.pageHistory.pop();
         //window.history.back();
-        if (app.pageHistory.length === 0) {
-          //$("#backbutton").css({opacity:0});
+        if (app.pageHistory.length < 2) {
+          $("#backbutton").css({opacity:0}).hide();
         }
       } 
     });
@@ -7468,6 +7524,40 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     Backbone.history.start({ pushState: true });
   });
   
+  var requestPageChange = function(href) {
+    
+    if (app.allowClick === true) {
+      
+      app.allowClick = false;
+      setTimeout(function() {
+        app.allowClick = true; // TODO: seems way hacky.
+      }, 450);
+      
+      app.pageHistory.push(href);
+
+      if ($('#backbutton').css('opacity') < 1) {
+        $('#backbutton').show().animate({opacity:1}, 100, 'linear');
+      }
+    
+      app.ScrollPositions[window.location.pathname] = document.body.scrollTop;
+      
+      log({
+        "action": "requestPageChange", 
+        "timestamp": new Date(), 
+        "href": href,
+        "pageHistory": app.pageHistory
+      });//TODO: hack
+      
+      Backbone.history.navigate(href, true); //this should be the ONLY place navigate is called.
+    } else {
+      log({
+        "error": "allowClick si false, but tap event fired. not changing pages.",
+        "href": href,
+        "pageHistory": app.pageHistory
+      });
+    }
+  };
+  
   // All navigation that is relative should be passed through the navigate
   // method, to be processed by the router.  If the link has a data-bypass
   // attribute, bypass the delegation completely.
@@ -7481,48 +7571,37 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
     if (href && href.slice(0, protocol.length) !== protocol && href.indexOf("javascript:") !== 0) {
       //$("#loading").show();
       evt.preventDefault();      
-      
-      if (app.allowClick === true) {
-        
-        app.allowClick = false;
-        setTimeout(function() {
-          app.allowClick = true; // TODO: seems way hacky.
-        }, 450);
-        
-        app.pageHistory.push(href);
-      
-        if ($('#backbutton').css('opacity') < 1) {
-          $('#backbutton').animate({opacity:1}, 500, 'linear');
-        }
-      
-        app.ScrollPositions[window.location.pathname] = document.body.scrollTop;
-      
-        console.log('pageHistory:',app.pageHistory);
-        
-        log({
-          "action": "tap", 
-          "timestamp": new Date(), 
-          "href": href
-        });//TODO: hack
-        
-        Backbone.history.navigate(href, true);
-      } else {
-        console.log('allowClick false, but tap here...', href);
-      }
-    } 
+      requestPageChange(href);
+    } else {
+      log({
+        "error": "tap fired, but href didn't match the if. hmm!"
+      });
+    }
       
   });
   
   // if we don't have a touchstart, make a click trigger a tap. because we're not on a mobile device that supports it. right?
   if (!('touchstart' in window)) {
     $(document).on('click', 'body', function(evt) {
+      
+      log({
+        "info": "because no touchstart, turning click into tap...now"
+      });
+      
       $(evt.target).trigger('tap');
       evt.preventDefault();
     });
+    
   } else {
+    
     $(document).on('click', 'body', function(evt) {
+      
       evt.preventDefault();
-      alert('got a click, even though weve got touchstart...');
+      
+      log({
+        "warning": "got click even though window has touchstart"
+      });
+      
       return false;
     });
   }

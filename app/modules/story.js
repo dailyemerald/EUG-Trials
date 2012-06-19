@@ -19,6 +19,11 @@ function(app, $, Backbone) {
     url: 'http://dailyemerald.com/section/2012-olympic-trials/json?callback=?',
     parse: function(data) {
 
+      window.log({
+        "function": "Story.Collection.parse",
+        "timestamp": new Date()
+      });
+
       data.forEach(function(story){
         //rewrite a smallThumbnail from the bigger one...
         if (typeof story.thumbnail === 'string') {
@@ -34,7 +39,7 @@ function(app, $, Backbone) {
         
       }); 
 
-      console.log('Story.Collection: json data into parse:', data);
+      //console.log('Story.Collection: json data into parse:', data);
 
       return data;
     }
@@ -53,20 +58,20 @@ function(app, $, Backbone) {
 
     initialize: function() {
       this.collection = app.StoryCollectionInstance;
-      console.log("Story.View.List init, this.collection:", this.collection);
+      //console.log("Story.View.List init, this.collection:", this.collection);
     
       this.collection.bind("reset", this.render, this);
     },
 
     render: function(done) {
-      console.log('s v l: render: collection:', this.collection);
+      //console.log('s v l: render: collection:', this.collection);
       // Fetch the template.
       var tmpl = app.fetchTemplate(this.template);
 
       // Set the template contents.
       this.$el.html(tmpl({ stories: this.collection.toJSON() }));
       //console.log(this.$el);
-      $('time').timeago();
+      this.$el.find('time').timeago();
       
       return this;
     }

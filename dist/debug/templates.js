@@ -16,6 +16,10 @@ this['JST']['app/templates/header.html'] = function(data) { return function (obj
 var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<!--<a href="#" id="back-button">BACK</a>-->\n\n<a id="backbutton"><span>Back</span></a>\n\n<div id="flag">EUG Trials</div>\n\n<a href="/about" id="aboutbutton"><span>?</span></a>');}return __p.join('');
 }(data, _)};
 
+this['JST']['app/templates/fourohfour.html'] = function(data) { return function (obj,_) {
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div style="text-align: center">\n<h2>Oops, I\'m sorry! That page doesn\'t exist.</h2>\n\n<a href="/">Let\'s go home?</a>\n</div>');}return __p.join('');
+}(data, _)};
+
 this['JST']['app/templates/footer.html'] = function(data) { return function (obj,_) {
 var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="nav-wrapper">\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/list">News</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/schedule">Schedule</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/photos">Fan Photos</a></span>\n\t</div>\n</div>');}return __p.join('');
 }(data, _)};
