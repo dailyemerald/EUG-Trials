@@ -25,7 +25,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/instagram.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div style="padding:5px">\n<h2>Fan photos</h2>\n<p>Check out fan photos taken within a few miles of Hayward Field. It’s easy to contribute. Just snap a picture using Instagram. Make sure it’s geotagged to your location. Then upload. Your picture will instantly appear below. Try it.</p>\n</div>\n\n<iframe src="http://dev.dailyemerald.com:8100/embed.html" width="100%" height="100%" frameborder="0" style="border:0;margin-left:5px;"></iframe>');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div style="padding:5px">\n<h2>Fan photos</h2>\n<p>Check out fan photos taken within a few miles of Hayward Field. It’s easy to contribute. Just snap a picture using Instagram. Make sure it’s geotagged to your location. Then upload. Your picture will instantly appear below. Try it.</p>\n</div>\n\n<iframe src="http://dev.dailyemerald.com:8301/embed.html" width="100%" height="100%" frameborder="0" style="border:0;margin-left:5px;"></iframe>');}return __p.join('');
 }(data, _)};
 
 this['JST']['app/templates/loading.html'] = function(data) { return function (obj,_) {
