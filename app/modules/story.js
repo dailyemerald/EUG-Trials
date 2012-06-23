@@ -35,7 +35,7 @@ function(app, $, Backbone) {
         }
         
         //rewrite the wordpress timestamp for 'timeago' relative time stuff
-        story.timestamp = story.date.split(" ").join("T") + "Z";
+        story.timestamp = story.date.split(" ").join("T") + "Z-0700";
         
       }); 
 
