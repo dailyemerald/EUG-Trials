@@ -42,7 +42,7 @@ function(app, $, Backbone, Hammer, headerTemplate, footerTemplate, scheduleTempl
       url: urlBase + encodeURIComponent(JSON.stringify(data))
     });
   };
-
+    
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
     routes: {
@@ -82,7 +82,7 @@ function(app, $, Backbone, Hammer, headerTemplate, footerTemplate, scheduleTempl
       var newViewDOM = newView.render().$el;
       this.main.html(newViewDOM); //DOM manipulation!
       
-      
+      var _lstime = new Date();
       var pathnameIndex = null;
       try {
         pathnameIndex = JSON.parse(localStorage.pathnameIndex);
@@ -100,6 +100,7 @@ function(app, $, Backbone, Hammer, headerTemplate, footerTemplate, scheduleTempl
         }
         localStorage.pathnameIndex = JSON.stringify(pathnameIndex);
       }
+      //log({'info': 'time to unpack/pack localStorage.pathnameIndex', 'time': new Date()-_lstime}); //this is as much as 20ms on an iphone 4S.
     
     },
     
@@ -215,12 +216,12 @@ function(app, $, Backbone, Hammer, headerTemplate, footerTemplate, scheduleTempl
       } catch (e) {        
         localStorage.pathnameIndex = JSON.stringify( {} ); //rebuild it if we fail
         pathnameIndex = JSON.parse(localStorage.pathnameIndex);
-        console.log("rebuilding localStorage.pathnameIndex");
+        //console.log("rebuilding localStorage.pathnameIndex");
       }
       try {
         pathnameIndex[href] = document.body.scrollTop;
         localStorage.pathnameIndex = JSON.stringify(pathnameIndex);
-        console.log(localStorage.pathnameIndex);
+        //console.log(localStorage.pathnameIndex);
         
       } catch (e) {
         log({"error": "couldn't write to localStorage in requestPageChange"});
@@ -247,6 +248,28 @@ function(app, $, Backbone, Hammer, headerTemplate, footerTemplate, scheduleTempl
   // method, to be processed by the router.  If the link has a data-bypass
   // attribute, bypass the delegation completely.
   //$(document).on(mobileTapEvent, "a:not([data-bypass])", function(evt) {
+  
+  var hammer = new Hammer(document.body); //TODO: Zepto?
+  //console.log('hammer instance', hammer);
+  
+  hammer.ontap = function(e) {
+    var touchedEl = $(e.originalEvent.target);
+    
+    if (touchedEl.attr('href')) {
+      requestPageChange( touchedEl.attr('href') );
+      log({'hammer':'tap on href primary'});
+      
+    } else if (touchedEl.parent().attr('href')) {
+      requestPageChange( touchedEl.parent().attr('href') );
+      log({'hammer':'tap on href parent'});
+      
+    } else {
+      log({'hammer':'tap, but not handled'});
+    }
+    //e.preventDefault();
+  };
+  
+  /*  
   $(document).on('tap','a:not([data-bypass])', function(evt) {
     //console.log('inside', mobileTapEvent, "handler");
  
@@ -279,16 +302,13 @@ function(app, $, Backbone, Hammer, headerTemplate, footerTemplate, scheduleTempl
     
   } else {
     
-    $(document).on('click', 'body', function(evt) {
-      
-      evt.preventDefault();
-      
-      log({
-        "warning": "got click even though window has touchstart"
-      });
-      
-      return false;
-    });
+    
   }
+  */
+
+  $(document).on('click', 'body', function(evt) {
+    evt.preventDefault();
+    return false;
+  });
 
 });
