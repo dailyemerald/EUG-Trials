@@ -14,9 +14,21 @@ function(app, $, Backbone) {
     // nothing yet
   });
   
+  
+  
   Story.Collection = Backbone.Collection.extend({
     model: Story.Model,
     url: 'http://dailyemerald.com/section/2012-olympic-trials/json?callback=?',
+    fetchIdea: function() { //TODO: this aint real
+      if (this.length === 0) { // how to get collection model lenght?
+        if (localStorage) {
+          if (localStorage.collection) {
+            return localStorage.collection;
+          }
+        }
+      }
+      return getAJAXdata();
+    },
     parse: function(data) {
 
       window.log({
@@ -35,7 +47,7 @@ function(app, $, Backbone) {
         }
         
         //rewrite the wordpress timestamp for 'timeago' relative time stuff
-        story.timestamp = story.date.split(" ").join("T") + "Z-0700";
+        story.timestamp = story.date.split(" ").join("T") + "-07:00";
         
       }); 
 
@@ -122,6 +134,7 @@ function(app, $, Backbone) {
         // Set the template contents.
         this.$el.html(tmpl({story: this.model.toJSON() }));
         $('time').timeago();
+        $('.ps-image').css({'width':'100%'}).find('p').css({"margin":"0"}); //TODO: hackity hack hack. reformat galleries for mobile.
         
         return this;
       } else {
