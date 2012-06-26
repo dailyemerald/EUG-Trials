@@ -4,6 +4,7 @@ require([
   // Libs
   "zepto",//"jquery",
   "backbone",
+  "hammer",
   //"masseuse",
   
   "text!templates/header.html",
@@ -19,7 +20,7 @@ require([
   "modules/fourohfour"
 ],
 
-function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule, About, Fourohfour) {
+function(app, $, Backbone, Hammer, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule, About, Fourohfour) {
 
   // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
   Backbone.View.prototype.close = function () {
@@ -79,90 +80,26 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       this.currentView = null;
     
       var newViewDOM = newView.render().$el;
-      this.main.html(newViewDOM);
+      this.main.html(newViewDOM); //DOM manipulation!
       
-      if (pathname in app.ScrollPositions) {
-        window.scrollTo(0, 1 + app.ScrollPositions[pathname]); 
-      } else {
-        window.scrollTo(0, 1);
-        app.ScrollPositions[pathname] = 0;
+      
+      var pathnameIndex = null;
+      try {
+        pathnameIndex = JSON.parse(localStorage.pathnameIndex);
+      } catch (e) {        
+        localStorage.pathnameIndex = JSON.stringify( {} ); //rebuild it if we fail
+        pathnameIndex = JSON.parse(localStorage.pathnameIndex);
       }
-      //this.main.find('img').hide();
-      //setTimeout(function() {
-        //console.log('calling timeago');
-        $('time').timeago();  
-        
-      setTimeout(function() {
-        if (app.allowClick === false) {
-          log({"info": "app.allowClick still false, showView changing to true"});
-          app.allowClick = true;
-        }
-      }, 500);  
-      //}, 5);
       
-      /*
-      this.main.find('img').forEach(function($el) {
-        $el.attr('src',$el.attr('data-img'));
-      });
-      */
-
-      /*
-      var self = this;
-        
-      this.main.animate({opacity: 0}, 100, 'linear', function() {
-    
-        $(this).html(newViewDOM); //$(this) is $("#main") (right?)
-        
-        if (self.currentView) {
-          console.log('closing', self.currentView);
-          self.currentView.close();
-        }
-        self.currentView = null;
-        
-        if (pathname in app.ScrollPositions) {
-          window.scrollTo(0, 1 + app.ScrollPositions[pathname]); 
+      if (pathnameIndex) {
+        if (pathnameIndex[pathname]) {
+          window.scrollTo(0, 1+pathnameIndex[pathname]);
         } else {
+          pathnameIndex[pathname] = 0;
           window.scrollTo(0, 1);
-          app.ScrollPositions[pathname] = 0;
         }
-        
-        $('time').timeago();
-        //app.allowClick = true;
-
-        $(this).animate({opacity: 1}, 100, 'linear', function() {
-          console.log('done');
-          
-          self.currentView = newView;
-          
-        });
-        
-        
-    
-      });
-      */  
-     
-
-      
-      
-      /*while ($("#main").children().length > 1) {
-        $("#main").children().eq(0).remove();
-        console.log("blam!");
+        localStorage.pathnameIndex = JSON.stringify(pathnameIndex);
       }
-      */
-      
-        
-      //},1);
-      /*$('img').css({opacity: 0});
-      $('#main').css({opacity: 0}).show();
-      
-      $('#main').animate(  {translate3d: '0,0,0', opacity: 0}, 0,  'linear', function() {
-        $('#main:not(img)').animate({translate3d: '0,0,0', opacity: 1}, 50, 'linear', function() {
-          $('img').animate({translate3d: '0,0,0', opacity: 1}, 1000, 'linear')
-        });  
-      });
-      */
-
-      
     
     },
     
@@ -271,13 +208,29 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
         $('#backbutton').show().animate({opacity:1}, 100, 'linear');
       }
     
-      app.ScrollPositions[window.location.pathname] = document.body.scrollTop;
+    
+      var pathnameIndex = null;
+      try {
+        pathnameIndex = JSON.parse(localStorage.pathnameIndex);
+      } catch (e) {        
+        localStorage.pathnameIndex = JSON.stringify( {} ); //rebuild it if we fail
+        pathnameIndex = JSON.parse(localStorage.pathnameIndex);
+        console.log("rebuilding localStorage.pathnameIndex");
+      }
+      try {
+        pathnameIndex[href] = document.body.scrollTop;
+        localStorage.pathnameIndex = JSON.stringify(pathnameIndex);
+        console.log(localStorage.pathnameIndex);
+        
+      } catch (e) {
+        log({"error": "couldn't write to localStorage in requestPageChange"});
+      }
       
       log({
         "action": "requestPageChange", 
         "timestamp": new Date(), 
-        "href": href,
-        "pageHistory": app.pageHistory
+        "href": href//,
+        //"pageHistory": app.pageHistory
       });//TODO: hack
       
       Backbone.history.navigate(href, true); //this should be the ONLY place navigate is called.

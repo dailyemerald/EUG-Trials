@@ -348,7 +348,7 @@ var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.pu
 }(data, _)};
 
 this['JST']['app/templates/schedule.html'] = function(data) { return function (obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div id="schedulewrapper">\n\n\t<ul>\n\t<li class="dateheader alternate">\n\t  Thursday, June 21\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">10:45 a.m.</div> \n\t  <div class="event">Hammer Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Trials</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">1 p.m.</div> \n\t  <div class="event">Hammer Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Hammer Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Trials</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">Hammer Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Friday, June 22\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">1 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">1:50 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:20 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:05 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:10 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:30 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:20 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:45 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:30 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:45 p.m.</div> \n\t  <div class="event">10,000m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">7:20 p.m.</div> \n\t  <div class="event">10,000m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Saturday, June 23\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">9:30 a.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">10:20 a.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">12:30 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">12:30 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:10 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:15 p.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:20 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:40 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:30 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:45 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:15 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:45 p.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:52 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Sunday, June 24\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:25 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:30 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:55 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:05 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:35 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:48 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Monday, June 25\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:50 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:20 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:25 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:45 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:50 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:05 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:50 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">7 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:47 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Tuesday, June 26\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time"></div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Wednesday, June 27\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time"></div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Thursday, June 28\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:45 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:15 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:30 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:50 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:05 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:05 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:30 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:45 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:15 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">7:38 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Friday, June 29\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">10:30 a.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">11:30 a.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">1:15 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">1:45 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:15 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:30 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:35 p.m.</div> \n\t  <div class="event">Mile</div>\n\t  <div>\n\t  <div class="gender">Nike HS Girls</div>\n\t  <div class="round">Exhibition Event</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:45 p.m.</div> \n\t  <div class="event">Mile</div>\n\t  <div>\n\t  <div class="gender">Nike HS Boys</div>\n\t  <div class="round">Exhibition Event</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:55 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:20 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:45 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:05 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:25 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:45 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Saturday, June 30\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:30 a.m.</div> \n\t  <div class="event">20km Race Walk</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Boys &amp; Girls</div>\n\t  <div class="round">Special Olympics</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:10 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:15 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:40 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:20 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Boys &amp; Girls</div>\n\t  <div class="round">USATF Youth</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Masters</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Masters</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:20 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:40 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Sunday, July 1\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:30 p.m.</div> \n\t  <div class="event">20km Race Walk</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:40 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:45 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:02 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:12 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:23 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:37 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:55 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\t</ul>\n\n</div>');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div id="schedulewrapper">\n\n\t<ul>\n\n\t<li class="dateheader alternate">\n\t  Thursday, June 28\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:15 p.m.</div> \n\t  <div class="event">Jason Lester "Journey for a Better World" Exhibition Event</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">National Anthem</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">Wounded Warrior 100m Sponsored by Deloitte Exhibition Event</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:50 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:30 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:05 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:05 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:30 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:45 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:15 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">7:38 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Friday, June 29\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">10:30 a.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">11:30 a.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">1:15 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">1:45 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:15 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:30 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:35 p.m.</div> \n\t  <div class="event">Mile</div>\n\t  <div>\n\t    <div class="gender">Nike HS Girls</div>\n\t    <div class="round">Exhibition Event</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:45 p.m.</div> \n\t  <div class="event">Mile</div>\n\t  <div>\n\t    <div class="gender">Nike HS Boys</div>\n\t    <div class="round">Exhibition Event</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:55 p.m.</div> \n\t  <div class="event">National Anthem</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:20 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:45 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:05 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:25 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:45 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Saturday, June 30\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:30 a.m.</div> \n\t  <div class="event">20km Race Walk</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t    <div class="gender">Boys &amp; Girls</div>\n\t    <div class="round">Special Olympics</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:10 p.m.</div> \n\t  <div class="event">National Anthem</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:15 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:40 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:20 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Boys &amp; Girls</div>\n\t    <div class="round">USATF Youth</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Masters</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Masters</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:20 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:40 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Sunday, July 1\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:30 a.m.</div> \n\t  <div class="event">20km Race Walk</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:40 p.m.</div> \n\t  <div class="event">National Anthem</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:45 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:02 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:12 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:23 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:37 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:55 p.m.</div> \n\t  <div class="event">Closing Ceremonies - Immediately following the Men\'s 200m Final</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\t</ul>\n\n</div>');}return __p.join('');
 }(data, _)};
 
 /* Zepto v1.0rc1 - polyfill zepto event detect fx ajax form touch - zeptojs.com/license */
@@ -6695,6 +6695,745 @@ function($, _, Backbone) {
   }, Backbone.Events);
 });
 
+/*
+ * Hammer.JS
+ * version 0.6.1
+ * author: Eight Media
+ * https://github.com/EightMedia/hammer.js
+ */
+ 
+var Hammer = function (element, options, undefined)
+{
+    var self = this;
+
+    var defaults = {
+        // prevent the default event or not... might be buggy when false
+        prevent_default    : false,
+        css_hacks          : true,
+
+        swipe              : true,
+        swipe_time         : 200,   // ms
+        swipe_min_distance : 20, // pixels
+
+        drag               : true,
+        drag_vertical      : true,
+        drag_horizontal    : true,
+        // minimum distance before the drag event starts
+        drag_min_distance  : 20, // pixels
+
+        // pinch zoom and rotation
+        transform          : true,
+        scale_treshold     : 0.1,
+        rotation_treshold  : 15, // degrees
+
+        tap                : true,
+        tap_double         : true,
+        tap_max_interval   : 300,
+        tap_max_distance   : 10,
+        tap_double_distance: 20,
+
+        hold               : true,
+        hold_timeout       : 500
+    };
+    options = mergeObject(defaults, options);
+
+    // some css hacks
+    (function() {
+        if(!options.css_hacks) {
+            return false;
+        }
+
+        var vendors = ['webkit','moz','ms','o',''];
+        var css_props = {
+            "userSelect": "none",
+            "touchCallout": "none",
+            "userDrag": "none",
+            "tapHighlightColor": "rgba(0,0,0,0)"
+        };
+
+        var prop = '';
+        for(var i = 0; i < vendors.length; i++) {
+            for(var p in css_props) {
+                prop = p;
+                if(vendors[i]) {
+                    prop = vendors[i] + prop.substring(0, 1).toUpperCase() + prop.substring(1);
+                }
+                element.style[ prop ] = css_props[p];
+            }
+        }
+    })();
+
+    // holds the distance that has been moved
+    var _distance = 0;
+
+    // holds the exact angle that has been moved
+    var _angle = 0;
+
+    // holds the diraction that has been moved
+    var _direction = 0;
+
+    // holds position movement for sliding
+    var _pos = { };
+
+    // how many fingers are on the screen
+    var _fingers = 0;
+
+    var _first = false;
+
+    var _gesture = null;
+    var _prev_gesture = null;
+
+    var _touch_start_time = null;
+    var _prev_tap_pos = {x: 0, y: 0};
+    var _prev_tap_end_time = null;
+
+    var _hold_timer = null;
+
+    var _offset = {};
+
+    // keep track of the mouse status
+    var _mousedown = false;
+
+    var _event_start;
+    var _event_move;
+    var _event_end;
+
+    var _has_touch = ('ontouchstart' in window);
+
+
+    /**
+     * option setter/getter
+     * @param   string  key
+     * @param   mixed   value
+     * @return  mixed   value
+     */
+    this.option = function(key, val) {
+        if(val != undefined) {
+            options[key] = val;
+        }
+
+        return options[key];
+    };
+
+
+    /**
+     * angle to direction define
+     * @param  float    angle
+     * @return string   direction
+     */
+    this.getDirectionFromAngle = function( angle )
+    {
+        var directions = {
+            down: angle >= 45 && angle < 135, //90
+            left: angle >= 135 || angle <= -135, //180
+            up: angle < -45 && angle > -135, //270
+            right: angle >= -45 && angle <= 45 //0
+        };
+
+        var direction, key;
+        for(key in directions){
+            if(directions[key]){
+                direction = key;
+                break;
+            }
+        }
+        return direction;
+    };
+
+
+    /**
+     * count the number of fingers in the event
+     * when no fingers are detected, one finger is returned (mouse pointer)
+     * @param  event
+     * @return int  fingers
+     */
+    function countFingers( event )
+    {
+        // there is a bug on android (until v4?) that touches is always 1,
+        // so no multitouch is supported, e.g. no, zoom and rotation...
+        return event.touches ? event.touches.length : 1;
+    }
+
+
+    /**
+     * get the x and y positions from the event object
+     * @param  event
+     * @return array  [{ x: int, y: int }]
+     */
+    function getXYfromEvent( event )
+    {
+        event = event || window.event;
+
+        // no touches, use the event pageX and pageY
+        if(!_has_touch) {
+            var doc = document,
+                body = doc.body;
+
+            return [{
+                x: event.pageX || event.clientX + ( doc && doc.scrollLeft || body && body.scrollLeft || 0 ) - ( doc && doc.clientLeft || body && doc.clientLeft || 0 ),
+                y: event.pageY || event.clientY + ( doc && doc.scrollTop || body && body.scrollTop || 0 ) - ( doc && doc.clientTop || body && doc.clientTop || 0 )
+            }];
+        }
+        // multitouch, return array with positions
+        else {
+            var pos = [], src, touches = event.touches.length > 0 ? event.touches : event.changedTouches;
+            for(var t=0, len=touches.length; t<len; t++) {
+                src = touches[t];
+                pos.push({ x: src.pageX, y: src.pageY });
+            }
+            return pos;
+        }
+    }
+
+
+    /**
+     * calculate the angle between two points
+     * @param   object  pos1 { x: int, y: int }
+     * @param   object  pos2 { x: int, y: int }
+     */
+    function getAngle( pos1, pos2 )
+    {
+        return Math.atan2(pos2.y - pos1.y, pos2.x - pos1.x) * 180 / Math.PI;
+    }
+
+
+    /**
+     * calculate the scale size between two fingers
+     * @param   object  pos_start
+     * @param   object  pos_move
+     * @return  float   scale
+     */
+    function calculateScale(pos_start, pos_move)
+    {
+        if(pos_start.length == 2 && pos_move.length == 2) {
+            var x, y;
+
+            x = pos_start[0].x - pos_start[1].x;
+            y = pos_start[0].y - pos_start[1].y;
+            var start_distance = Math.sqrt((x*x) + (y*y));
+
+            x = pos_move[0].x - pos_move[1].x;
+            y = pos_move[0].y - pos_move[1].y;
+            var end_distance = Math.sqrt((x*x) + (y*y));
+
+            return end_distance / start_distance;
+        }
+
+        return 0;
+    }
+
+
+    /**
+     * calculate the rotation degrees between two fingers
+     * @param   object  pos_start
+     * @param   object  pos_move
+     * @return  float   rotation
+     */
+    function calculateRotation(pos_start, pos_move)
+    {
+        if(pos_start.length == 2 && pos_move.length == 2) {
+            var x, y;
+
+            x = pos_start[0].x - pos_start[1].x;
+            y = pos_start[0].y - pos_start[1].y;
+            var start_rotation = Math.atan2(y, x) * 180 / Math.PI;
+
+            x = pos_move[0].x - pos_move[1].x;
+            y = pos_move[0].y - pos_move[1].y;
+            var end_rotation = Math.atan2(y, x) * 180 / Math.PI;
+
+            return end_rotation - start_rotation;
+        }
+
+        return 0;
+    }
+
+
+    /**
+     * trigger an event/callback by name with params
+     * @param string name
+     * @param array  params
+     */
+    function triggerEvent( eventName, params )
+    {
+        // return touches object
+        params.touches = getXYfromEvent(params.originalEvent);
+        params.type = eventName;
+
+        // trigger callback
+        if(isFunction(self["on"+ eventName])) {
+            self["on"+ eventName].call(self, params);
+        }
+    }
+
+
+    /**
+     * cancel event
+     * @param   object  event
+     * @return  void
+     */
+
+    function cancelEvent(event)
+    {
+        event = event || window.event;
+        if(event.preventDefault){
+            event.preventDefault();
+            event.stopPropagation();
+        }else{
+            event.returnValue = false;
+            event.cancelBubble = true;
+        }
+    }
+
+
+    /**
+     * reset the internal vars to the start values
+     */
+    function reset()
+    {
+        _pos = {};
+        _first = false;
+        _fingers = 0;
+        _distance = 0;
+        _angle = 0;
+        _gesture = null;
+    }
+
+
+    var gestures = {
+        // hold gesture
+        // fired on touchstart
+        hold : function(event)
+        {
+            // only when one finger is on the screen
+            if(options.hold) {
+                _gesture = 'hold';
+                clearTimeout(_hold_timer);
+
+                _hold_timer = setTimeout(function() {
+                    if(_gesture == 'hold') {
+                        triggerEvent("hold", {
+                            originalEvent   : event,
+                            position        : _pos.start
+                        });
+                    }
+                }, options.hold_timeout);
+            }
+        },
+
+        // swipe gesture
+        // fired on touchend
+        swipe : function(event)
+        {
+            if(!_pos.move) {
+                return;
+            }
+
+            // get the distance we moved
+            var _distance_x = _pos.move[0].x - _pos.start[0].x;
+            var _distance_y = _pos.move[0].y - _pos.start[0].y;
+            _distance = Math.sqrt(_distance_x*_distance_x + _distance_y*_distance_y);
+
+            // compare the kind of gesture by time
+            var now = new Date().getTime();
+            var touch_time = now - _touch_start_time;
+
+            if(options.swipe && (options.swipe_time > touch_time) && (_distance > options.swipe_min_distance)) {
+                // calculate the angle
+                _angle = getAngle(_pos.start[0], _pos.move[0]);
+                _direction = self.getDirectionFromAngle(_angle);
+
+                _gesture = 'swipe';
+
+                var position = { x: _pos.move[0].x - _offset.left,
+                    y: _pos.move[0].y - _offset.top };
+
+                var event_obj = {
+                    originalEvent   : event,
+                    position        : position,
+                    direction       : _direction,
+                    distance        : _distance,
+                    distanceX       : _distance_x,
+                    distanceY       : _distance_y,
+                    angle           : _angle
+                };
+
+                // normal slide event
+                triggerEvent("swipe", event_obj);
+            }
+        },
+
+
+        // drag gesture
+        // fired on mousemove
+        drag : function(event)
+        {
+            // get the distance we moved
+            var _distance_x = _pos.move[0].x - _pos.start[0].x;
+            var _distance_y = _pos.move[0].y - _pos.start[0].y;
+            _distance = Math.sqrt(_distance_x * _distance_x + _distance_y * _distance_y);
+
+            // drag
+            // minimal movement required
+            if(options.drag && (_distance > options.drag_min_distance) || _gesture == 'drag') {
+                // calculate the angle
+                _angle = getAngle(_pos.start[0], _pos.move[0]);
+                _direction = self.getDirectionFromAngle(_angle);
+
+                // check the movement and stop if we go in the wrong direction
+                var is_vertical = (_direction == 'up' || _direction == 'down');
+                if(((is_vertical && !options.drag_vertical) || (!is_vertical && !options.drag_horizontal))
+                    && (_distance > options.drag_min_distance)) {
+                    return;
+                }
+
+                _gesture = 'drag';
+
+                var position = { x: _pos.move[0].x - _offset.left,
+                    y: _pos.move[0].y - _offset.top };
+
+                var event_obj = {
+                    originalEvent   : event,
+                    position        : position,
+                    direction       : _direction,
+                    distance        : _distance,
+                    distanceX       : _distance_x,
+                    distanceY       : _distance_y,
+                    angle           : _angle
+                };
+
+                // on the first time trigger the start event
+                if(_first) {
+                    triggerEvent("dragstart", event_obj);
+
+                    _first = false;
+                }
+
+                // normal slide event
+                triggerEvent("drag", event_obj);
+
+                cancelEvent(event);
+            }
+        },
+
+
+        // transform gesture
+        // fired on touchmove
+        transform : function(event)
+        {
+            if(options.transform) {
+                if(countFingers(event) != 2) {
+                    return false;
+                }
+
+                var rotation = calculateRotation(_pos.start, _pos.move);
+                var scale = calculateScale(_pos.start, _pos.move);
+
+                if(_gesture != 'drag' &&
+                    (_gesture == 'transform' || Math.abs(1-scale) > options.scale_treshold || Math.abs(rotation) > options.rotation_treshold)) {
+                    _gesture = 'transform';
+
+                    _pos.center = {  x: ((_pos.move[0].x + _pos.move[1].x) / 2) - _offset.left,
+                        y: ((_pos.move[0].y + _pos.move[1].y) / 2) - _offset.top };
+
+                    var event_obj = {
+                        originalEvent   : event,
+                        position        : _pos.center,
+                        scale           : scale,
+                        rotation        : rotation
+                    };
+
+                    // on the first time trigger the start event
+                    if(_first) {
+                        triggerEvent("transformstart", event_obj);
+                        _first = false;
+                    }
+
+                    triggerEvent("transform", event_obj);
+
+                    cancelEvent(event);
+
+                    return true;
+                }
+            }
+
+            return false;
+        },
+
+
+        // tap and double tap gesture
+        // fired on touchend
+        tap : function(event)
+        {
+            // compare the kind of gesture by time
+            var now = new Date().getTime();
+            var touch_time = now - _touch_start_time;
+
+            // dont fire when hold is fired
+            if(options.hold && !(options.hold && options.hold_timeout > touch_time)) {
+                return;
+            }
+
+            // when previous event was tap and the tap was max_interval ms ago
+            var is_double_tap = (function(){
+                if (_prev_tap_pos &&
+                    options.tap_double &&
+                    _prev_gesture == 'tap' &&
+                    (_touch_start_time - _prev_tap_end_time) < options.tap_max_interval)
+                {
+                    var x_distance = Math.abs(_prev_tap_pos[0].x - _pos.start[0].x);
+                    var y_distance = Math.abs(_prev_tap_pos[0].y - _pos.start[0].y);
+                    return (_prev_tap_pos && _pos.start && Math.max(x_distance, y_distance) < options.tap_double_distance);
+                }
+                return false;
+            })();
+
+            if(is_double_tap) {
+                _gesture = 'double_tap';
+                _prev_tap_end_time = null;
+
+                triggerEvent("doubletap", {
+                    originalEvent   : event,
+                    position        : _pos.start
+                });
+                cancelEvent(event);
+            }
+
+            // single tap is single touch
+            else {
+                var x_distance = (_pos.move) ? Math.abs(_pos.move[0].x - _pos.start[0].x) : 0;
+                var y_distance =  (_pos.move) ? Math.abs(_pos.move[0].y - _pos.start[0].y) : 0;
+                _distance = Math.max(x_distance, y_distance);
+
+                if(_distance < options.tap_max_distance) {
+                    _gesture = 'tap';
+                    _prev_tap_end_time = now;
+                    _prev_tap_pos = _pos.start;
+
+                    if(options.tap) {
+                        triggerEvent("tap", {
+                            originalEvent   : event,
+                            position        : _pos.start
+                        });
+                        cancelEvent(event);
+                    }
+                }
+            }
+
+        }
+
+    };
+
+
+    function handleEvents(event)
+    {
+        switch(event.type)
+        {
+            case 'mousedown':
+            case 'touchstart':
+                _pos.start = getXYfromEvent(event);
+                _touch_start_time = new Date().getTime();
+                _fingers = countFingers(event);
+                _first = true;
+                _event_start = event;
+
+                // borrowed from jquery offset https://github.com/jquery/jquery/blob/master/src/offset.js
+                var box = element.getBoundingClientRect();
+                var clientTop  = element.clientTop  || document.body.clientTop  || 0;
+                var clientLeft = element.clientLeft || document.body.clientLeft || 0;
+                var scrollTop  = window.pageYOffset || element.scrollTop  || document.body.scrollTop;
+                var scrollLeft = window.pageXOffset || element.scrollLeft || document.body.scrollLeft;
+
+                _offset = {
+                    top: box.top + scrollTop - clientTop,
+                    left: box.left + scrollLeft - clientLeft
+                };
+
+                _mousedown = true;
+
+                // hold gesture
+                gestures.hold(event);
+
+                if(options.prevent_default) {
+                    cancelEvent(event);
+                }
+                break;
+
+            case 'mousemove':
+            case 'touchmove':
+                if(!_mousedown) {
+                    return false;
+                }
+                _event_move = event;
+                _pos.move = getXYfromEvent(event);
+
+                if(!gestures.transform(event)) {
+                    gestures.drag(event);
+                }
+                break;
+
+            case 'mouseup':
+            case 'mouseout':
+            case 'touchcancel':
+            case 'touchend':
+                if(!_mousedown || (_gesture != 'transform' && event.touches && event.touches.length > 0)) {
+                    return false;
+                }
+
+                _mousedown = false;
+                _event_end = event;
+                
+                var dragging = _gesture == 'drag';
+
+                // swipe gesture
+                gestures.swipe(event);
+
+
+                // drag gesture
+                // dragstart is triggered, so dragend is possible
+                if(dragging) {
+                    triggerEvent("dragend", {
+                        originalEvent   : event,
+                        direction       : _direction,
+                        distance        : _distance,
+                        angle           : _angle
+                    });
+                }
+
+                // transform
+                // transformstart is triggered, so transformed is possible
+                else if(_gesture == 'transform') {
+                    triggerEvent("transformend", {
+                        originalEvent   : event,
+                        position        : _pos.center,
+                        scale           : calculateScale(_pos.start, _pos.move),
+                        rotation        : calculateRotation(_pos.start, _pos.move)
+                    });
+                }
+                else {
+                    gestures.tap(_event_start);
+                }
+
+                _prev_gesture = _gesture;
+
+                // trigger release event
+                triggerEvent("release", {
+                    originalEvent   : event,
+                    gesture         : _gesture
+                });
+
+                // reset vars
+                reset();
+                break;
+        }
+    }
+
+
+    // bind events for touch devices
+    // except for windows phone 7.5, it doesnt support touch events..!
+    if(_has_touch) {
+        addEvent(element, "touchstart touchmove touchend touchcancel", handleEvents);
+    }
+    // for non-touch
+    else {
+        addEvent(element, "mouseup mousedown mousemove", handleEvents);
+        addEvent(element, "mouseout", function(event) {
+            if(!isInsideHammer(element, event.relatedTarget)) {
+                handleEvents(event);
+            }
+        });
+    }
+
+
+    /**
+     * find if element is (inside) given parent element
+     * @param   object  element
+     * @param   object  parent
+     * @return  bool    inside
+     */
+    function isInsideHammer(parent, child) {
+        // get related target for IE
+        if(!child && window.event && window.event.toElement){
+            child = window.event.toElement;
+        }
+
+        if(parent === child){
+            return true;
+        }
+
+        // loop over parentNodes of child until we find hammer element
+        if(child){
+            var node = child.parentNode;
+            while(node !== null){
+                if(node === parent){
+                    return true;
+                };
+                node = node.parentNode;
+            }
+        }
+        return false;
+    }
+
+
+    /**
+     * merge 2 objects into a new object
+     * @param   object  obj1
+     * @param   object  obj2
+     * @return  object  merged object
+     */
+    function mergeObject(obj1, obj2) {
+        var output = {};
+
+        if(!obj2) {
+            return obj1;
+        }
+
+        for (var prop in obj1) {
+            if (prop in obj2) {
+                output[prop] = obj2[prop];
+            } else {
+                output[prop] = obj1[prop];
+            }
+        }
+        return output;
+    }
+
+
+    /**
+     * check if object is a function
+     * @param   object  obj
+     * @return  bool    is function
+     */
+    function isFunction( obj ){
+        return Object.prototype.toString.call( obj ) == "[object Function]";
+    }
+
+
+    /**
+     * attach event
+     * @param   node    element
+     * @param   string  types
+     * @param   object  callback
+     */
+    function addEvent(element, types, callback) {
+        types = types.split(" ");
+        for(var t= 0,len=types.length; t<len; t++) {
+            if(element.addEventListener){
+                element.addEventListener(types[t], callback, false);
+            }
+            else if(document.attachEvent){
+                element.attachEvent("on"+ types[t], callback);
+            }
+        }
+    }
+}
+
+window.Hammer = Hammer;
+
+if ( typeof define === "function" && define.amd ) {
+  define( "hammer", [], function () { return Hammer; } );
+}
+;
 /**
  * @license RequireJS text 2.0.0 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
@@ -7002,7 +7741,7 @@ define('text!templates/header.html',[],function () { return '<!--<a href="#" id=
 
 define('text!templates/footer.html',[],function () { return '<div class="nav-wrapper">\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/list">News</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/schedule">Schedule</a></span>\n\t</div>\n\t<div class="nav-button">\n\t\t<span class="nav-button-inner"><a href="/photos">Fan Photos</a></span>\n\t</div>\n</div>';});
 
-define('text!templates/schedule.html',[],function () { return '<div id="schedulewrapper">\n\n\t<ul>\n\t<li class="dateheader alternate">\n\t  Thursday, June 21\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">10:45 a.m.</div> \n\t  <div class="event">Hammer Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Trials</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">1 p.m.</div> \n\t  <div class="event">Hammer Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Hammer Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Trials</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">Hammer Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Friday, June 22\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">1 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">1:50 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:20 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:05 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:10 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:30 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:20 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">1st Round</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:45 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:30 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:45 p.m.</div> \n\t  <div class="event">10,000m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">7:20 p.m.</div> \n\t  <div class="event">10,000m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Saturday, June 23\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">9:30 a.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">10:20 a.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">12:30 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">12:30 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:10 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:15 p.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:20 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:40 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:30 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:45 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:15 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Decathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:45 p.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:52 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Sunday, June 24\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:25 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:30 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:55 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:05 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:35 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:48 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Monday, June 25\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:50 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:20 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:25 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:45 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:50 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:05 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:50 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">7 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:47 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Tuesday, June 26\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time"></div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Wednesday, June 27\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time"></div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Thursday, June 28\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:45 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:15 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:30 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:50 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:05 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:05 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:30 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:45 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:15 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">7:38 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Friday, June 29\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">10:30 a.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">11:30 a.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">1:15 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">1:45 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:15 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:30 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:35 p.m.</div> \n\t  <div class="event">Mile</div>\n\t  <div>\n\t  <div class="gender">Nike HS Girls</div>\n\t  <div class="round">Exhibition Event</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:45 p.m.</div> \n\t  <div class="event">Mile</div>\n\t  <div>\n\t  <div class="gender">Nike HS Boys</div>\n\t  <div class="round">Exhibition Event</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:55 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:20 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:45 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:05 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:25 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:45 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Saturday, June 30\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:30 a.m.</div> \n\t  <div class="event">20km Race Walk</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t  <div class="gender">Boys &amp; Girls</div>\n\t  <div class="round">Special Olympics</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:10 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:15 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:40 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:20 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Boys &amp; Girls</div>\n\t  <div class="round">USATF Youth</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Masters</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Masters</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:20 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:40 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Sunday, July 1\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:30 p.m.</div> \n\t  <div class="event">20km Race Walk</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:40 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:45 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:02 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:12 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:23 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Women</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:37 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t  <div class="gender">Men</div>\n\t  <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:55 p.m.</div> \n\t  <div class="event"></div>\n\t  <div>\n\t  <div class="gender"></div>\n\t  <div class="round"></div>\n\t  </div>\n\t</li>\n\t</ul>\n\n</div>';});
+define('text!templates/schedule.html',[],function () { return '<div id="schedulewrapper">\n\n\t<ul>\n\n\t<li class="dateheader alternate">\n\t  Thursday, June 28\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:15 p.m.</div> \n\t  <div class="event">Jason Lester "Journey for a Better World" Exhibition Event</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">National Anthem</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">Wounded Warrior 100m Sponsored by Deloitte Exhibition Event</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:50 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:30 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:05 p.m.</div> \n\t  <div class="event">Pole Vault</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:30 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:05 p.m.</div> \n\t  <div class="event">Discus Throw</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:30 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:45 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:15 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">7:38 p.m.</div> \n\t  <div class="event">5,000m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader">\n\t  Friday, June 29\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">10:30 a.m.</div> \n\t  <div class="event">100m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">11:30 a.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">1:15 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">1:45 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:15 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:30 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:35 p.m.</div> \n\t  <div class="event">Mile</div>\n\t  <div>\n\t    <div class="gender">Nike HS Girls</div>\n\t    <div class="round">Exhibition Event</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:45 p.m.</div> \n\t  <div class="event">Mile</div>\n\t  <div>\n\t    <div class="gender">Nike HS Boys</div>\n\t    <div class="round">Exhibition Event</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:55 p.m.</div> \n\t  <div class="event">National Anthem</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:20 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Shot Put</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:30 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3:45 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:05 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Qualifying</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:25 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:45 p.m.</div> \n\t  <div class="event">3,000m Steeplechase</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Saturday, June 30\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:30 a.m.</div> \n\t  <div class="event">20km Race Walk</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">3:35 p.m.</div> \n\t  <div class="event">100m</div>\n\t  <div>\n\t    <div class="gender">Boys &amp; Girls</div>\n\t    <div class="round">Special Olympics</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:10 p.m.</div> \n\t  <div class="event">National Anthem</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:15 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:20 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:40 p.m.</div> \n\t  <div class="event">Triple Jump</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5 p.m.</div> \n\t  <div class="event">High Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:20 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Boys &amp; Girls</div>\n\t    <div class="round">USATF Youth</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">5:40 p.m.</div> \n\t  <div class="event">400m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Masters</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">5:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Masters</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Semi-Finals</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:20 p.m.</div> \n\t  <div class="event">800m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Heptathlon</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">6:40 p.m.</div> \n\t  <div class="event">110m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">6:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="dateheader alternate">\n\t  Sunday, July 1\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">7:30 a.m.</div> \n\t  <div class="event">20km Race Walk</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">2:40 p.m.</div> \n\t  <div class="event">National Anthem</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">2:45 p.m.</div> \n\t  <div class="event">Javelin Throw</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">3 p.m.</div> \n\t  <div class="event">Long Jump</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:02 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:12 p.m.</div> \n\t  <div class="event">400m Hurdles</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:23 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Women</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:37 p.m.</div> \n\t  <div class="event">1,500m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper">\n\t  <div class="time">4:50 p.m.</div> \n\t  <div class="event">200m</div>\n\t  <div>\n\t    <div class="gender">Men</div>\n\t    <div class="round">Final</div>\n\t  </div>\n\t</li>\n\n\t<li class="event-wrapper alternate">\n\t  <div class="time">4:55 p.m.</div> \n\t  <div class="event">Closing Ceremonies - Immediately following the Men\'s 200m Final</div>\n\t  <div>\n\t    <div></div>\n\t    <div></div>\n\t  </div>\n\t</li>\n\t</ul>\n\n</div>';});
 
 define('text!templates/loading.html',[],function () { return '<div id="loading">\n<h1>Loading...</h1>\n</div>';});
 
@@ -7022,9 +7761,21 @@ function(app, $, Backbone) {
     // nothing yet
   });
   
+  
+  
   Story.Collection = Backbone.Collection.extend({
     model: Story.Model,
     url: 'http://dailyemerald.com/section/2012-olympic-trials/json?callback=?',
+    fetchIdea: function() { //TODO: this aint real
+      if (this.length === 0) { // how to get collection model lenght?
+        if (localStorage) {
+          if (localStorage.collection) {
+            return localStorage.collection;
+          }
+        }
+      }
+      return getAJAXdata();
+    },
     parse: function(data) {
 
       window.log({
@@ -7043,7 +7794,7 @@ function(app, $, Backbone) {
         }
         
         //rewrite the wordpress timestamp for 'timeago' relative time stuff
-        story.timestamp = story.date.split(" ").join("T") + "Z";
+        story.timestamp = story.date.split(" ").join("T") + "-07:00";
         
       }); 
 
@@ -7130,6 +7881,7 @@ function(app, $, Backbone) {
         // Set the template contents.
         this.$el.html(tmpl({story: this.model.toJSON() }));
         $('time').timeago();
+        $('.ps-image').css({'width':'100%'}).find('p').css({"margin":"0"}); //TODO: hackity hack hack. reformat galleries for mobile.
         
         return this;
       } else {
@@ -7272,6 +8024,7 @@ require([
   // Libs
   "zepto",//"jquery",
   "backbone",
+  "hammer",
   //"masseuse",
   
   "text!templates/header.html",
@@ -7287,7 +8040,7 @@ require([
   "modules/fourohfour"
 ],
 
-function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule, About, Fourohfour) {
+function(app, $, Backbone, Hammer, headerTemplate, footerTemplate, scheduleTemplate, loadingTemplate, Story, Instagram, Schedule, About, Fourohfour) {
 
   // http://coenraets.org/blog/2012/01/backbone-js-lessons-learned-and-improved-sample-app/
   Backbone.View.prototype.close = function () {
@@ -7347,90 +8100,26 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
       this.currentView = null;
     
       var newViewDOM = newView.render().$el;
-      this.main.html(newViewDOM);
+      this.main.html(newViewDOM); //DOM manipulation!
       
-      if (pathname in app.ScrollPositions) {
-        window.scrollTo(0, 1 + app.ScrollPositions[pathname]); 
-      } else {
-        window.scrollTo(0, 1);
-        app.ScrollPositions[pathname] = 0;
+      
+      var pathnameIndex = null;
+      try {
+        pathnameIndex = JSON.parse(localStorage.pathnameIndex);
+      } catch (e) {        
+        localStorage.pathnameIndex = JSON.stringify( {} ); //rebuild it if we fail
+        pathnameIndex = JSON.parse(localStorage.pathnameIndex);
       }
-      //this.main.find('img').hide();
-      //setTimeout(function() {
-        //console.log('calling timeago');
-        $('time').timeago();  
-        
-      setTimeout(function() {
-        if (app.allowClick === false) {
-          log({"info": "app.allowClick still false, showView changing to true"});
-          app.allowClick = true;
-        }
-      }, 500);  
-      //}, 5);
       
-      /*
-      this.main.find('img').forEach(function($el) {
-        $el.attr('src',$el.attr('data-img'));
-      });
-      */
-
-      /*
-      var self = this;
-        
-      this.main.animate({opacity: 0}, 100, 'linear', function() {
-    
-        $(this).html(newViewDOM); //$(this) is $("#main") (right?)
-        
-        if (self.currentView) {
-          console.log('closing', self.currentView);
-          self.currentView.close();
-        }
-        self.currentView = null;
-        
-        if (pathname in app.ScrollPositions) {
-          window.scrollTo(0, 1 + app.ScrollPositions[pathname]); 
+      if (pathnameIndex) {
+        if (pathnameIndex[pathname]) {
+          window.scrollTo(0, 1+pathnameIndex[pathname]);
         } else {
+          pathnameIndex[pathname] = 0;
           window.scrollTo(0, 1);
-          app.ScrollPositions[pathname] = 0;
         }
-        
-        $('time').timeago();
-        //app.allowClick = true;
-
-        $(this).animate({opacity: 1}, 100, 'linear', function() {
-          console.log('done');
-          
-          self.currentView = newView;
-          
-        });
-        
-        
-    
-      });
-      */  
-     
-
-      
-      
-      /*while ($("#main").children().length > 1) {
-        $("#main").children().eq(0).remove();
-        console.log("blam!");
+        localStorage.pathnameIndex = JSON.stringify(pathnameIndex);
       }
-      */
-      
-        
-      //},1);
-      /*$('img').css({opacity: 0});
-      $('#main').css({opacity: 0}).show();
-      
-      $('#main').animate(  {translate3d: '0,0,0', opacity: 0}, 0,  'linear', function() {
-        $('#main:not(img)').animate({translate3d: '0,0,0', opacity: 1}, 50, 'linear', function() {
-          $('img').animate({translate3d: '0,0,0', opacity: 1}, 1000, 'linear')
-        });  
-      });
-      */
-
-      
     
     },
     
@@ -7539,13 +8228,29 @@ function(app, $, Backbone, headerTemplate, footerTemplate, scheduleTemplate, loa
         $('#backbutton').show().animate({opacity:1}, 100, 'linear');
       }
     
-      app.ScrollPositions[window.location.pathname] = document.body.scrollTop;
+    
+      var pathnameIndex = null;
+      try {
+        pathnameIndex = JSON.parse(localStorage.pathnameIndex);
+      } catch (e) {        
+        localStorage.pathnameIndex = JSON.stringify( {} ); //rebuild it if we fail
+        pathnameIndex = JSON.parse(localStorage.pathnameIndex);
+        console.log("rebuilding localStorage.pathnameIndex");
+      }
+      try {
+        pathnameIndex[href] = document.body.scrollTop;
+        localStorage.pathnameIndex = JSON.stringify(pathnameIndex);
+        console.log(localStorage.pathnameIndex);
+        
+      } catch (e) {
+        log({"error": "couldn't write to localStorage in requestPageChange"});
+      }
       
       log({
         "action": "requestPageChange", 
         "timestamp": new Date(), 
-        "href": href,
-        "pageHistory": app.pageHistory
+        "href": href//,
+        //"pageHistory": app.pageHistory
       });//TODO: hack
       
       Backbone.history.navigate(href, true); //this should be the ONLY place navigate is called.
@@ -7623,6 +8328,7 @@ require.config({
     // Libraries
     //jquery: "../assets/js/libs/jquery",
     zepto: "../assets/js/libs/zepto",
+    hammer: "../assets/js/libs/hammer",
     lodash: "../assets/js/libs/lodash",
     backbone: "../assets/js/libs/backbone"
     //masseuse: "../assets/js/libs/masseuse"

@@ -11,6 +11,7 @@ require.config({
     // Libraries
     //jquery: "../assets/js/libs/jquery",
     zepto: "../assets/js/libs/zepto",
+    hammer: "../assets/js/libs/hammer",
     lodash: "../assets/js/libs/lodash",
     backbone: "../assets/js/libs/backbone"
     //masseuse: "../assets/js/libs/masseuse"
